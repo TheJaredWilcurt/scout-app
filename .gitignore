@@ -4,3 +4,6 @@ site/vendor/*
 tmp/*
 build/*
 lib/*
+bower_components/
+node_modules/
+RUN.lnk
