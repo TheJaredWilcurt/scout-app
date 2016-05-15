@@ -15,6 +15,20 @@ var WHT = "\033[39m";
 var RED = "\033[91m";
 var GRN = "\033[32m";
 
+var OS = process.platform;
+var exectuable = '';
+
+//OS Specific values for opening files.
+if (OS == 'darwin') { executable = 'open ';     }
+if (OS == 'linux')  { executable = 'xdg-open '; }
+if (OS == 'win32')  { exectuable = 'explorer '; }
+
+var localhost = 'http://localhost:' + port;
+
+function runCMD (executableAndArgs) {
+    require("child_process").exec( executableAndArgs);
+}
+
 //Create the server
 http.createServer(function (request, response) {
 
@@ -75,10 +89,10 @@ http.createServer(function (request, response) {
             response.write(file, "binary");
             response.end();
         });
-
     });
-
 }).listen(parseInt(port, 10));
 
+runCMD(exectuable + localhost);
 //Message to display when server is started
-console.log(WHT + "Static file server running at\n  => http://localhost:" + port + "/\nCTRL + C to shutdown");
+console.log(WHT + "Static file server running at " + GRN + localhost);
+console.log(WHT + "CTRL + C to shutdown");
