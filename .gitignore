@@ -7,3 +7,4 @@ lib/*
 bower_components/
 node_modules/
 RUN.lnk
+thumbs.db
