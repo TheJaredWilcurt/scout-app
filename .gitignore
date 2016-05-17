@@ -7,3 +7,5 @@ lib/*
 bower_components/*
 node_modules/*
 .idea/*
+RUN.lnk
+thumbs.db
