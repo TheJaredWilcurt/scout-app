@@ -10,12 +10,13 @@
 //Plugins
 
 //Stuff that affects every page
-@import "_main.sass";          // Main CSS for the site
+@import "_global.sass";        // Core CSS for the site
 @import "_header.sass";        // CSS for the header and navigation at the top of each page
+@import "_main.sass";          // CSS for the main content on your page
 @import "_footer.sass";        // CSS for the footer at the bottom of every page
 
 //Stuff that affects specific pages
-@import "_homepage.sass";      // Styles specific to index.html
+//@import "_homepage.sass";      // Styles specific to index.html
 
 //Stuff that goes at the end
 @import "_mediaqueries.sass";  // Adjusts the CSS of elements depending on browser or device resolution. Adaptive Web Design.
