@@ -3,12 +3,17 @@
 
 This is the repo for the official website of the open source desktop app, Scout-App. Scout-App is the easiest to use pre-processor for Sass.
 
+This repo can currently be viewed here:
+
+* http://TheJaredWilcurt.github.io/scout-app
+
 * * *
 
 ## Project management
 
 To do list:
 
+* [ ] Wireframe/page layout (Micah)
 * [ ] Visually design a single page (static) site for the app (will be hosted on GitHub).
 * [x] ~~Create screenshots for Win/OSX/Ubuntu. (TJW)~~
 * [x] ~~Wipe out the old site, reorganize and set up the new site (TJW)~~
