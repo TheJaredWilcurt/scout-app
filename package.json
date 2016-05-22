@@ -1,0 +1,24 @@
+{
+  "name": "scout-app",
+  "version": "2.0.1-beta",
+  "description": "This is the repo for the official website of the open source desktop app, Scout-App. Scout-App is the easiest to use pre-processor for Sass.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheJaredWilcurt/scout-app.git"
+  },
+  "author": "The Jared Wilcurt, Zach Dennis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TheJaredWilcurt/scout-app/issues"
+  },
+  "homepage": "https://github.com/TheJaredWilcurt/scout-app#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-jshint": "^2.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.1",
+    "jshint": "^2.9.2",
+    "sass": "^0.5.0"
+  }
+}
