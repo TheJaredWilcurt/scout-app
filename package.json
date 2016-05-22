@@ -21,7 +21,7 @@
         "sass": "^0.5.0"
     },
     "scripts": {
-        "start": "node server.js"
+        "start": "gulp"
     },
     "license": "MIT",
     "licenses": [{
