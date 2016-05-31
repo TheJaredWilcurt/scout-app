@@ -26,4 +26,4 @@ To do list:
 * [ ] Link to how to translate Scout-App
 * [ ] New logo and branding based on Scout the Puppy (Kim)
 * [ ] "Getting Started with Scout-App 2" video
-* [x] ~~"Create your own Theme" video (TJW)~~
+* [x] ~~"[Create your own Theme](https://www.youtube.com/watch?v=DtEVIDvBrSI)" video (TJW)~~
