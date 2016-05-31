@@ -1,6 +1,7 @@
 @charset "utf-8";              // Character type for the stylesheet
 
 //Webfonts
+@import url(https://fonts.googleapis.com/css?family=Rubik+One);
 
 //Stuff that goes at the start
 @import "_var.sass";           // Sass Variables and Mixins - Does not effect page, but other Sass files reference this file.

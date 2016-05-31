@@ -24,6 +24,6 @@ To do list:
 * [ ] [Listing of Mixins](https://github.com/TheJaredWilcurt/scout-app#supportedbuilt-in-mixin-libraries) that come built in to Scout-App 2
 * [ ] List languages supported by Scout-App
 * [ ] Link to how to translate Scout-App
-* [ ] New logo and branding based on Scout the Puppy (Kim)
+* [x] ~~New logo and branding based on Scout the Puppy (Kim)~~
 * [ ] "Getting Started with Scout-App 2" video
 * [x] ~~"[Create your own Theme](https://www.youtube.com/watch?v=DtEVIDvBrSI)" video (TJW)~~
