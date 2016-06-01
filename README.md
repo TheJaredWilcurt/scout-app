@@ -9,6 +9,10 @@ This repo can currently be viewed here:
 
 * * *
 
+Current development is happening in the `dev-pages` branch.
+
+* * *
+
 ## Project management
 
 To do list:
