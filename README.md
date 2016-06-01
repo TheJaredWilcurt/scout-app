@@ -12,7 +12,9 @@ This repo can currently be viewed here:
 ### Prerequisites for running locally
 
 1. Install [Node.js](http://nodejs.org)
-2. Install the LiveReload [Chrome Extension](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en)/[Firefox plugin](https://addons.mozilla.org/en-US/firefox/addon/livereload/)
+2. Install the LiveReload
+ * [Chrome Extension](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en) - After install go to your Extension settings and give LiveReload access to file URLs
+ * [Firefox plugin](https://addons.mozilla.org/en-US/firefox/addon/livereload/)
 
 ### Running locally
 
