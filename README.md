@@ -1,9 +1,11 @@
 
 # Scout-App 2 Homepage
 
-This is the repo for the official website of the open source desktop app, Scout-App. Scout-App is the easiest to use pre-processor for Sass.
+This is the repo for the official website of the open source desktop app, Scout-App.
 
-This repo can currently be viewed here:
+Scout-App is the simplest Sass processor.
+
+The repo for the desktop app is located here:
 
 * http://TheJaredWilcurt.github.io/scout-app
 
@@ -11,19 +13,21 @@ This repo can currently be viewed here:
 
 ### Prerequisites for running locally
 
-1. Install [Node.js](http://nodejs.org)
-2. Install the LiveReload
+1. Install [Node.js](http://nodejs.org) (required)
+2. Install the LiveReload plugin (recommended)
  * [Chrome Extension](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en) - After install go to your Extension settings and give LiveReload access to file URLs
  * [Firefox plugin](https://addons.mozilla.org/en-US/firefox/addon/livereload/)
 
 ### Running locally
 
-1. Clone repo
+1. Clone repo using git
 2. `npm install`
 3. `npm start`
 4. Click the livereload icon in your browser to enable it for that page
 
 * * *
+
+Before grabbing one of these tasks ask in the [Scout-App chatroom](https://gitter.im/TheJaredWilcurt/scout-app) if someone is already working on it.
 
 ## Project management
 
