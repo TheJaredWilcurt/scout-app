@@ -277,7 +277,7 @@ th {
 }
 
 ::-webkit-scrollbar-button {
-  background: #F00;
+  background: #D72A2A;
   height: 18px;
 }
 
@@ -286,7 +286,7 @@ th {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #F00;
+  background: #D72A2A;
 }
 
 *,
@@ -315,14 +315,28 @@ img {
   background-color: #FFF;
 }
 
+.half {
+  display: inline-block;
+  width: 50%;
+  text-align: center;
+  vertical-align: top;
+}
+
 header {
-  min-height: 150px;
-  background-color: #444;
+  height: 100%;
+  background: #FFD255;
+  padding: 0px 0px 5px 0px;
+  text-align: center;
+}
+
+header img {
+  position: relative;
+  top: 38%;
+  padding: 0px 10px;
 }
 
 main {
-  min-height: 500px;
-  background-color: #FAA;
+  background: #F5D4D4;
 }
 
 img {
@@ -330,33 +344,72 @@ img {
 }
 
 h1 {
-  font-family: 'Rubik One', sans-serif;
+  margin: 70px 0px 30px 0px;
+  color: #821919;
+  font-family: "Rubik One", sans-serif;
+  font-size: 40px;
+}
+
+iframe {
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 400px;
+}
+
+section {
+  font-size: 0px;
+}
+
+.video-container {
+  background-color: #000;
+}
+
+#downloads {
+  margin: 0px auto;
+  padding-bottom: 20px;
 }
 
 #downloads a {
+  width: 250px;
   display: inline-block;
-  background: #F88;
+  background: #FFD255;
+  margin: 10px 10px 10px 10px;
   padding: 20px;
-  color: #600;
+  color: #D72A2A;
+  font-size: 18px;
+  font-weight: bold;
   text-decoration: none;
 }
 
 #downloads a:hover {
-  background: #F66;
-  color: #800;
+  background: #DD8D4B;
+  color: #EBE2DB;
 }
 
 footer {
-  min-height: 300px;
+  max-width: 850px;
+  margin: 0px auto;
+  padding: 10px 0px 0px 0px;
   background-color: #FFF;
+  text-align: center;
 }
 
 footer div {
   display: inline-block;
+  width: 220px;
+  margin: 0px 0px 20px 0px;
+  text-align: left;
   vertical-align: top;
 }
 
+footer div:last-of-type {
+  margin-bottom: 50px;
+}
+
 footer h3 {
+  font-family: "Rubik One", sans-serif;
   font-size: 20px;
   margin: 10px 0px;
 }
@@ -368,38 +421,11 @@ footer a {
   text-decoration: none;
 }
 
-@media screen and (max-width: 1429px) {
-  #wrapper {
-    max-width: 900px;
+@media screen and (max-width: 1090px) {
+  #downloads {
+    max-width: 80%;
   }
-}
-
-@media screen and (max-width: 960px) {
-  #wrapper {
-    max-width: 700px;
-  }
-}
-
-@media screen and (max-width: 709px) {
-  #wrapper {
-    max-width: 500px;
-  }
-}
-
-@media screen and (max-width: 570px) {
-  .homepage .start {
-    margin-left: 0px;
-  }
-}
-
-@media screen and (max-width: 518px) {
-  #wrapper {
-    max-width: 320px;
-  }
-}
-
-@media screen and (max-width: 336px) {
-  #wrapper {
-    max-width: 240px;
+  .half {
+    width: 100%;
   }
 }
