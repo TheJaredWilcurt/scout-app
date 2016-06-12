@@ -1,0 +1,33 @@
+{
+    "name": "scout-app-site",
+    "version": "0.1.0",
+    "description": "Official website of the open source desktop app, Scout-App. The easiest way to process Sass.",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/TheJaredWilcurt/scout-app.git"
+    },
+    "author": "The Jared Wilcurt, Micah, Ken, Kim",
+    "bugs": {
+        "url": "https://github.com/mhs/scout-app/issues"
+    },
+    "homepage": "https://github.com/TheJaredWilcurt/scout-app#readme",
+    "devDependencies": {
+        "express": "^4.13.4",
+        "gulp": "^3.9.1",
+        "gulp-jshint": "^2.0.1",
+        "gulp-livereload": "^3.8.1",
+        "gulp-rename": "^1.2.2",
+        "gulp-sass": "^2.3.1",
+        "gulp-uglify": "^1.5.3",
+        "jshint": "^2.9.2",
+        "sass": "^0.5.0"
+    },
+    "scripts": {
+        "start": "gulp"
+    },
+    "license": "MIT",
+    "licenses": [{
+        "type": "MIT",
+        "url": "https://github.com/mhs/scout-app/blob/master/LICENSE"
+    }]
+}

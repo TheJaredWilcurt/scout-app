@@ -9,7 +9,19 @@ This repo can currently be viewed here:
 
 * * *
 
-Current development is happening in the `dev-pages` branch.
+### Prerequisites for running locally
+
+1. Install [Node.js](http://nodejs.org)
+2. Install the LiveReload
+ * [Chrome Extension](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en) - After install go to your Extension settings and give LiveReload access to file URLs
+ * [Firefox plugin](https://addons.mozilla.org/en-US/firefox/addon/livereload/)
+
+### Running locally
+
+1. Clone repo
+2. `npm install`
+3. `npm start`
+4. Click the livereload icon in your browser to enable it for that page
 
 * * *
 
@@ -20,6 +32,7 @@ To do list:
 * [ ] Wireframe/page layout (Micah)
 * [ ] Visually design a single page (static) site for the app (will be hosted on GitHub).
 * [x] ~~Create screenshots for Win/OSX/Ubuntu. (TJW)~~
+* [ ] Take NEW screenshots now that we have a different logo.
 * [x] ~~Wipe out the old site, reorganize and set up the new site (TJW)~~
 * [ ] Use [GitHub's API](https://developer.github.com/v3/repos/releases) to dynamically set the values of the download buttons (Ken)
 * [ ] Use Crossbrowser.js and 64or32.js to display the correct download button. (Ken)
@@ -28,6 +41,6 @@ To do list:
 * [ ] [Listing of Mixins](https://github.com/TheJaredWilcurt/scout-app#supportedbuilt-in-mixin-libraries) that come built in to Scout-App 2
 * [ ] List languages supported by Scout-App
 * [ ] Link to how to translate Scout-App
-* [ ] New logo and branding based on Scout the Puppy (Kim)
+* [x] ~~New logo and branding based on Scout the Puppy (Kim)~~
 * [ ] "Getting Started with Scout-App 2" video
 * [x] ~~"[Create your own Theme](https://www.youtube.com/watch?v=DtEVIDvBrSI)" video (TJW)~~
