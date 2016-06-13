@@ -418,10 +418,11 @@ footer a {
   display: block;
   padding: 0px 15px;
   color: #400;
+  line-height: 23px;
   text-decoration: none;
 }
 
-@media screen and (max-width: 1090px) {
+@media screen and (max-width: 1093px) {
   #downloads {
     max-width: 80%;
   }
