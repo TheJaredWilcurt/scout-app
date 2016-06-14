@@ -1,16 +1,31 @@
 //.homepage
 
 main
-    background: #F5D4D4
+    background: $brownSugarKetchup
 
 img
     max-width: 100%
 
-h1
-    margin: 70px 0px 30px 0px
-    color: $brownSugarKetchup
+h1,
+h3
     font-family: $logo-font
+    color: $mustard
+
+h1
+    margin: 70px 0px 15px 0px
     font-size: 40px
+
+h3
+    margin: 15px auto 10px auto
+    font-size: 20px
+
+hr
+    width: 80%
+    background: $mustard
+    color: $mustard
+    border: 1px solid $mustard
+    border-top-width: 5px
+    border-radius: 12px
 
 iframe
     +bmp0
@@ -34,7 +49,8 @@ section
         padding: 20px
         color: $ketchup
         font-size: 18px
-        font-weight: bold
+        font-family: sans-serif
+        font-weight: 900
         text-decoration: none
         &:hover
             background: $puppySpot

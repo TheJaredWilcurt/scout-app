@@ -272,23 +272,6 @@ th {
   padding: 0;
 }
 
-::-webkit-scrollbar {
-  width: 14px;
-}
-
-::-webkit-scrollbar-button {
-  background: #D72A2A;
-  height: 18px;
-}
-
-::-webkit-scrollbar-track-piece {
-  background-color: #444;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #D72A2A;
-}
-
 *,
 *:before,
 *:after {
@@ -336,18 +319,36 @@ header img {
 }
 
 main {
-  background: #F5D4D4;
+  background: #821919;
 }
 
 img {
   max-width: 100%;
 }
 
-h1 {
-  margin: 70px 0px 30px 0px;
-  color: #821919;
+h1,
+h3 {
   font-family: "Rubik One", sans-serif;
+  color: #FFD255;
+}
+
+h1 {
+  margin: 70px 0px 15px 0px;
   font-size: 40px;
+}
+
+h3 {
+  margin: 15px auto 10px auto;
+  font-size: 20px;
+}
+
+hr {
+  width: 80%;
+  background: #FFD255;
+  color: #FFD255;
+  border: 1px solid #FFD255;
+  border-top-width: 5px;
+  border-radius: 12px;
 }
 
 iframe {
@@ -379,7 +380,8 @@ section {
   padding: 20px;
   color: #D72A2A;
   font-size: 18px;
-  font-weight: bold;
+  font-family: sans-serif;
+  font-weight: 900;
   text-decoration: none;
 }
 
