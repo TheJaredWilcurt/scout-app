@@ -315,6 +315,7 @@ header {
 header img {
   position: relative;
   top: 38%;
+  max-width: 84%;
   padding: 0px 10px;
 }
 
