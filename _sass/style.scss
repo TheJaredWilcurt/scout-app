@@ -17,6 +17,11 @@
 @import "_main.sass";          // CSS for the main content on your page
 @import "_footer.sass";        // CSS for the footer at the bottom of every page
 
+//Stuff for specific sections
+@import "_downloads.sass";     // Download buttons and Getting started video
+@import "_whatsnew.sass";      // The scou comparrison table
+@import "_quotes.sass";        // Quotes about the app
+
 //Stuff that affects specific pages
 //@import "_homepage.sass";      // Styles specific to index.html
 

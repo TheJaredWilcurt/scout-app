@@ -366,8 +366,79 @@ section {
   font-size: 0px;
 }
 
-.video-container {
-  background-color: #000;
+section table {
+  max-width: 740px;
+  margin: 0px auto;
+  font-family: Montserrat, sans-serif;
+  font-size: 22px;
+}
+
+section table a {
+  color: #D72A2A;
+}
+
+section thead {
+  padding: 0px 0px 0px 0px;
+}
+
+section th {
+  border-bottom: 2px solid #000;
+  padding-bottom: 12px;
+  font-size: 30px;
+  vertical-align: bottom;
+}
+
+section tbody tr:first-of-type td {
+  padding-top: 11px;
+}
+
+section th,
+section td:first-of-type {
+  width: 33.3333333%;
+  font-weight: bold;
+}
+
+section td {
+  padding: 0px 4px;
+  line-height: 37px;
+  vertical-align: middle;
+}
+
+footer {
+  max-width: 850px;
+  margin: 0px auto;
+  padding: 10px 0px 0px 0px;
+  background-color: #FFF;
+  text-align: center;
+}
+
+footer div {
+  display: inline-block;
+  width: 220px;
+  margin: 0px 0px 20px 0px;
+  text-align: left;
+  vertical-align: top;
+}
+
+footer div:last-of-type {
+  margin-bottom: 50px;
+}
+
+footer h3 {
+  font-family: "Rubik One", sans-serif;
+  font-size: 20px;
+  margin: 10px 0px;
+}
+
+footer a {
+  display: block;
+  padding: 0px 15px 7px 15px;
+  color: #400;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #D72A2A;
 }
 
 #downloads {
@@ -391,6 +462,37 @@ section {
 #downloads a:hover {
   background: #DD8D4B;
   color: #EBE2DB;
+}
+
+.video-container {
+  background-color: #000;
+}
+
+#whatsnew {
+  background: #EBE2DB;
+}
+
+#whatsnew h1 {
+  margin: 0px;
+  padding: 60px 0px 40px 0px;
+  color: #DD8D4B;
+  text-align: center;
+}
+
+#whatsnew thead {
+  color: #821919;
+}
+
+#whatsnew th {
+  border-color: #821919;
+}
+
+#whatsnew th:first-of-type {
+  font-size: 26px;
+}
+
+#whatsnew tr:nth-of-type(even) {
+  background: rgba(255, 255, 255, 0.5);
 }
 
 #quotes {
@@ -439,48 +541,17 @@ section {
   content: '”';
 }
 
-footer {
-  max-width: 850px;
-  margin: 0px auto;
-  padding: 10px 0px 0px 0px;
-  background-color: #FFF;
-  text-align: center;
-}
-
-footer div {
-  display: inline-block;
-  width: 220px;
-  margin: 0px 0px 20px 0px;
-  text-align: left;
-  vertical-align: top;
-}
-
-footer div:last-of-type {
-  margin-bottom: 50px;
-}
-
-footer h3 {
-  font-family: "Rubik One", sans-serif;
-  font-size: 20px;
-  margin: 10px 0px;
-}
-
-footer a {
-  display: block;
-  padding: 0px 15px 7px 15px;
-  color: #400;
-  text-decoration: none;
-}
-
-footer a:hover {
-  color: #D72A2A;
-}
-
 @media screen and (max-width: 1093px) {
   #downloads {
     max-width: 80%;
   }
   .half {
     width: 100%;
+  }
+  section table {
+    font-size: 17.6px;
+  }
+  section th {
+    font-size: 24px;
   }
 }

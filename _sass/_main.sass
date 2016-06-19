@@ -34,56 +34,27 @@ iframe
 
 section
     font-size: 0px
-
-.video-container
-    background-color: #000
-
-#downloads
-    margin: 0px auto
-    padding-bottom: 20px
-    a
-        width: 250px
-        display: inline-block
-        background: $mustard
-        margin: 10px 10px 10px 10px
-        padding: 20px
-        color: $ketchup
-        font-size: 18px
-        font-family: sans-serif
-        font-weight: 900
-        text-decoration: none
-        &:hover
-            background: $puppySpot
-            color: $puppyBase
-
-#quotes
-    background: $puppyBase
-    padding: 30px 0px 40px
-    font-family: $secondaryFont
-    font-weight: 700
-    h3
-        padding: 10px 0px 10px 0px
-        color: $puppySpot
-        font-size: 25px
-        font-weight: 300
-    h3,
-    ul
-        max-width: 960px
+    table
+        max-width: 740px
         margin: 0px auto
-    li
-        margin: 0px 0px 0px 60px
-        font-size: 20px
-        line-height: 24px
-        list-style-type: disc
-    q
-        font-size: 15px
-        font-style: italic
-        font-weight: 400
-        opacity: 0.75
-        &:before,
-        &:after
-            font-style: normal
-        &:before
-            content: '‟'
-        &:after
-            content: '”'
+        font-family: $secondaryFont
+        font-size: 22px
+        a
+            color: $ketchup
+    thead
+        padding: 0px 0px 0px 0px
+    th
+        border-bottom: 2px solid #000
+        padding-bottom: 12px
+        font-size: 30px
+        vertical-align: bottom
+    tbody tr:first-of-type td
+        padding-top: 11px
+    th,
+    td:first-of-type
+        width: 33.3333333%
+        font-weight: bold
+    td
+        padding: 0px 4px
+        line-height: 37px
+        vertical-align: middle
