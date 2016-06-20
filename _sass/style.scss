@@ -1,30 +1,29 @@
-@charset "utf-8";              // Character type for the stylesheet
+@charset "utf-8";                // Character type for the stylesheet
 
 //Webfonts
 @import url(https://fonts.googleapis.com/css?family=Rubik+One);
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
 //Stuff that goes at the start
-@import "_var.sass";           // Sass Variables and Mixins - Does not effect page, but other Sass files reference this file.
-@import "_ven.meyer.sass";     // Resets browser defaults so browsers render pages the same
-@import "_ven.normalize.sass"; // Removes inconsistencies in the way different browsers render items by default
+@import "_var.sass";             // Sass Variables and Mixins - Does not effect page, but other Sass files reference this file.
+@import "_ven.meyer.sass";       // Resets browser defaults so browsers render pages the same
+@import "_ven.normalize.sass";   // Removes inconsistencies in the way different browsers render items by default
 
 //Plugins
+@import "_ven.slick.sass";       // Slick carousel plugin
+@import "_ven.slick-theme.sass"; // Slick default theme
 
 //Stuff that affects every page
-@import "_global.sass";        // Core CSS for the site
-@import "_header.sass";        // CSS for the header and navigation at the top of each page
-@import "_main.sass";          // CSS for the main content on your page
-@import "_footer.sass";        // CSS for the footer at the bottom of every page
+@import "_global.sass";          // Core CSS for the site
+@import "_header.sass";          // CSS for the header and navigation at the top of each page
+@import "_main.sass";            // CSS for the main content on your page
+@import "_footer.sass";          // CSS for the footer at the bottom of every page
 
 //Stuff for specific sections
-@import "_downloads.sass";     // Download buttons and Getting started video
-@import "_whatsnew.sass";      // The scou comparrison table
-@import "_quotes.sass";        // Quotes about the app
-
-//Stuff that affects specific pages
-//@import "_homepage.sass";      // Styles specific to index.html
+@import "_downloads.sass";       // Download buttons and Getting started video
+@import "_whatsnew.sass";        // The scou comparrison table
+@import "_quotes.sass";          // Quotes about the app
 
 //Stuff that goes at the end
-@import "_mediaqueries.sass";  // Adjusts the CSS of elements depending on browser or device resolution. Adaptive Web Design.
-@import "_crossbrowser.sass";  // CSS to correct issues that only occur in specific environments
+@import "_mediaqueries.sass";    // Adjusts the CSS of elements depending on browser or device resolution. Adaptive Web Design.
+@import "_crossbrowser.sass";    // CSS to correct issues that only occur in specific environments

@@ -1,0 +1,65 @@
+/* Slider */
+
+.slick-slider
+    +noselect
+    position: relative
+    display: block
+    box-sizing: border-box
+    -ms-touch-action: pan-y
+    touch-action: pan-y
+    -webkit-tap-highlight-color: transparent
+
+.slick-list
+    position: relative
+    display: block
+    margin: 0px
+    padding: 0px
+    overflow: hidden
+    &:focus
+        outline: none
+    &.dragging
+        cursor: pointer
+        cursor: hand
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+    +transform(0, 0, 0)
+
+.slick-track
+    position: relative
+    top: 0px
+    left: 0px
+    display: block
+    &:before,
+    &:after
+        content: ""
+        display: table
+    &:after
+        clear: both
+    .slick-loading &
+        visibility: hidden
+
+.slick-slide
+    display: none
+    height: 100%
+    min-height: 1px
+    float: left
+    [dir="rtl"] &
+        float: right
+    img
+        display: block
+    &.slick-loading img
+        display: none
+    &.dragging img
+        pointer-events: none
+    .slick-initialized &
+        display: block
+    .slick-loading &
+        visibility: hidden
+    .slick-vertical &
+        display: block
+        height: auto
+        border: 1px solid transparent
+
+.slick-arrow.slick-hidden
+    display: none

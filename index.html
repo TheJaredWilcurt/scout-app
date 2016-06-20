@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+<head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />    <!-- Must be first item in <Head> -->
     <title>Scout - Sass without all the hassle</title>
     <meta charset="UTF-8"                                                                                  />
@@ -46,13 +46,6 @@
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
-    <script type="text/javascript">
-    if (typeof jQuery == 'undefined') {
-          document.write(unescape("%3Cscript src='_scripts/jquery-2.2.3.min.js' type='text/javascript'%3E%3C/script%3E"));
-      }
-    </script> <!-- Load local jQuery if Google CDN is unreachable -->
 </head>
 <body>
     <header>
@@ -67,18 +60,18 @@
                 <div id="downloads">
                     <h3>Downloads</h3>
                     <div class="half">
-                        <a href="https://github.com/TheJaredWilcurt/scout-app/releases">Linux 32-Bit</a>
-                        <a href="https://github.com/TheJaredWilcurt/scout-app/releases">Linux 64-Bit</a>
+                        <a href="https://github.com/TheJaredWilcurt/scout-app/releases" target="_blank">Linux 32-Bit</a>
+                        <a href="https://github.com/TheJaredWilcurt/scout-app/releases" target="_blank">Linux 64-Bit</a>
                     </div>
                     <div class="half">
-                        <a href="https://github.com/TheJaredWilcurt/scout-app/releases">OSX</a>
-                        <a href="https://github.com/TheJaredWilcurt/scout-app/releases">Windows</a>
+                        <a href="https://github.com/TheJaredWilcurt/scout-app/releases" target="_blank">OSX</a>
+                        <a href="https://github.com/TheJaredWilcurt/scout-app/releases" target="_blank">Windows</a>
                     </div>
                 </div>
             </div>
             <div class="half">
                 <!-- Placeholder video -->
-                <iframe src="https://www.youtube-nocookie.com/embed/iaEZbyCH_Sw?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+                <iframe src="https://www.youtube-nocookie.com/embed/iaEZbyCH_Sw?rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
             </div>
         </section>
 
@@ -88,9 +81,9 @@
             <table>
                 <thead>
                     <tr>
-                        <th>Scout Comparison</th>
+                        <th>Version Comparison</th>
                         <th>2012 (0.7.1)</th>
-                        <th>2016 (2.0.3)</th>
+                        <th>2016 (<span class="currentVersion">2.0.0</span>)</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -205,6 +198,16 @@
             <a href="https://github.com/TheJaredWilcurt/scout-app/blob/Scout-App-2-Dev/documentation/contributing.md">Work on features that are on the roadmap</a>
         </div>
     </footer>
+
+    <!-- SCRIPTS -->
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+    <script type="text/javascript">
+    if (typeof jQuery == 'undefined') {
+          document.write(unescape("%3Cscript src='_scripts/jquery-2.2.3.min.js' type='text/javascript'%3E%3C/script%3E"));
+      }
+    </script> <!-- Load local jQuery if Google CDN is unreachable -->
+    <script type="text/javascript" src="_scripts/ven.slick.min.js"></script>
     <script src="_scripts/main.js"></script>
 </body>
 </html>

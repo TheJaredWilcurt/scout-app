@@ -13,3 +13,18 @@ $puppySpot: #DD8D4B;
     border: 0px
     margin: 0px
     padding: 0px
+
+@mixin noselect
+    -webkit-touch-callout: none
+    -webkit-user-select: none
+    -khtml-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+
+@mixin transform($x, $y, $z)
+    -webkit-transform: translate3d($x, $y, $z)
+    -moz-transform: translate3d($x, $y, $z)
+    -ms-transform: translate3d($x, $y, $z)
+    -o-transform: translate3d($x, $y, $z)
+    transform: translate3d($x, $y, $z)
