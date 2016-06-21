@@ -151,6 +151,36 @@
             </table>
         </section>
 
+        <section>
+            <div class="half">
+            </div>
+            <div class="half slick">
+                <div><img data-lazy="_img/screenshots/win7/01.png" /><p>Some text</p></div>
+                <div><img data-lazy="_img/screenshots/win7/02.png" /><p>Some text</p></div>
+                <div><img data-lazy="_img/screenshots/win7/03.png" /><p>Some text</p></div>
+                <div><img data-lazy="_img/screenshots/win7/04.png" /><p>Some text</p></div>
+                <div><img data-lazy="_img/screenshots/win7/05.png" /><p>Some text</p></div>
+                <div><img data-lazy="_img/screenshots/win7/06.png" /><p>Some text</p></div>
+                <div><img data-lazy="_img/screenshots/win7/07.png" /><p>Some text</p></div>
+                <div><img data-lazy="_img/screenshots/win7/08.png" /><p>Some text</p></div>
+                <div><img data-lazy="_img/screenshots/win7/09.png" /><p>Some text</p></div>
+                <div><img data-lazy="_img/screenshots/win7/10.png" /><p>Some text</p></div>
+                <div><img data-lazy="_img/screenshots/win7/11.png" /><p>Some text</p></div>
+                <div><img data-lazy="_img/screenshots/win7/12.png" /><p>Some text</p></div>
+                <div><img data-lazy="_img/screenshots/win7/13.png" /><p>Some text</p></div>
+                <div><img data-lazy="_img/screenshots/win7/14.png" /><p>Some text</p></div>
+                <div><img data-lazy="_img/screenshots/win7/15.png" /><p>Some text</p></div>
+                <div><img data-lazy="_img/screenshots/win7/16.png" /><p>Some text</p></div>
+                <div><img data-lazy="_img/screenshots/win7/17.png" /><p>Some text</p></div>
+                <div><img data-lazy="_img/screenshots/win7/18.png" /><p>Some text</p></div>
+                <div><img data-lazy="_img/screenshots/win7/19.png" /><p>Some text</p></div>
+                <div><img data-lazy="_img/screenshots/win7/20.png" /><p>Some text</p></div>
+                <div><img data-lazy="_img/screenshots/win7/21.png" /><p>Some text</p></div>
+                <div><img data-lazy="_img/screenshots/win7/22.png" /><p>Some text</p></div>
+                <div><img data-lazy="_img/screenshots/win7/23.png" /><p>Some text</p></div>
+            </div>
+        </section>
+
         <section id="quotes">
             <h3>Scout-App is recommended by:</h3>
             <ul>
@@ -209,5 +239,15 @@
     </script> <!-- Load local jQuery if Google CDN is unreachable -->
     <script type="text/javascript" src="_scripts/ven.slick.min.js"></script>
     <script src="_scripts/main.js"></script>
+    <script type="text/javascript">
+        $('.slick').slick({
+            lazyLoad: 'ondemand',
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true,
+            centerMode: true,
+            focusOnSelect: true
+        });
+    </script>
 </body>
 </html>
