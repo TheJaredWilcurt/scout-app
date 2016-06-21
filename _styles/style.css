@@ -560,7 +560,7 @@ th {
 }
 
 .slick img {
-  max-height: 300px;
+  max-height: 600px;
   margin: 0px auto;
 }
 
@@ -862,5 +862,8 @@ footer a:hover {
   }
   section th {
     font-size: 24px;
+  }
+  .slick img {
+    max-height: 300px;
   }
 }
