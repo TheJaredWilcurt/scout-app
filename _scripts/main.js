@@ -13,10 +13,12 @@ $.get(latestRelease, function (data) {
 // ignore this, temporary storage for site data
 window.siteData = {
     "os": [
-        { "folder": "win7",   "name": "Windows" },
-        { "folder": "ubuntu", "name": "Ubuntu"  },
-        { "folder": "zorin",  "name": "Zorin"   },
-        { "folder": "osx",    "name": "OSX"     }
+        { "folder": "win7",   "name": "Windows", "legacy": [ { "name": "XP",            "image": "xp"       },
+                                                             { "name": "Windows Vista", "image": "vista"    },
+                                                             { "name": "Windows 10",    "image": "win10"    } ] },
+        { "folder": "ubuntu", "name": "Ubuntu",  "legacy": [ { "name": "Ubuntu 12 LTS", "image": "ubuntu12" } ] },
+        { "folder": "zorin",  "name": "Zorin",   "legacy": [ { "name": "Debian",        "image": "debian"   } ] },
+        { "folder": "osx",    "name": "OSX",     "legacy": [ { "name": "OSX 10.6",      "image": "osx106"   } ] }
     ],
     "cultures": [
         { "language": "English", "code": "en", "image": "02" },
