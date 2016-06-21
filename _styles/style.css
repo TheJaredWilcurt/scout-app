@@ -559,8 +559,14 @@ th {
   outline: none;
 }
 
+.slick img {
+  max-height: 300px;
+  margin: 0px auto;
+}
+
 .slick p {
   font-size: 14px;
+  padding-bottom: 20px;
 }
 
 .slick-slide {
@@ -768,6 +774,7 @@ footer a:hover {
 
 #whatsnew {
   background: #EBE2DB;
+  padding-bottom: 40px;
 }
 
 #whatsnew h1 {
@@ -791,6 +798,10 @@ footer a:hover {
 
 #whatsnew tr:nth-of-type(even) {
   background: rgba(255, 255, 255, 0.5);
+}
+
+#screenshots .half {
+  font-size: 16px;
 }
 
 #quotes {
