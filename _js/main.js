@@ -6,6 +6,7 @@ $.get(latestRelease, function (data) {
     // update the 4 OS download buttons to have correct links
     // update the version number in the version comparison table
     console.log(data);
+    // test
     // bonus: in the title tag for the download button, denote the file size of the download in MB
     // bonus: in the title tag for the download button, denote the actual filename
 });
