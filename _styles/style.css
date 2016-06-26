@@ -611,6 +611,34 @@ img {
   vertical-align: top;
 }
 
+.bgwhite {
+  background: #FFF;
+}
+
+.bgblack {
+  background: #000;
+}
+
+.bgpuppybase {
+  background: #EBE2DB;
+}
+
+.bgpuppyspot {
+  background: #DD8D4B;
+}
+
+.bgketchup {
+  background: #D72A2A;
+}
+
+.bgmustard {
+  background: #FFD255;
+}
+
+.bgbrownsugarketchup {
+  background: #821919;
+}
+
 header {
   height: 100%;
   background: #FFD255;
@@ -768,10 +796,6 @@ footer a:hover {
   color: #EBE2DB;
 }
 
-.video-container {
-  background-color: #000;
-}
-
 #whatsnew {
   background: #EBE2DB;
   padding-bottom: 40px;
@@ -798,6 +822,10 @@ footer a:hover {
 
 #whatsnew tr:nth-of-type(even) {
   background: rgba(255, 255, 255, 0.5);
+}
+
+#screenshots [data-os] {
+  cursor: pointer;
 }
 
 #screenshots .half {

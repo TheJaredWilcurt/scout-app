@@ -14,14 +14,14 @@ $.get(latestRelease, function (data) {
 
 // ignore this, temporary storage for site data
 window.siteData = {
-    "os": [
-        { "folder": "win7",   "name": "Windows", "legacy": [ { "name": "XP",            "image": "xp"       },
-                                                             { "name": "Windows Vista", "image": "vista"    },
-                                                             { "name": "Windows 10",    "image": "win10"    } ] },
-        { "folder": "ubuntu", "name": "Ubuntu",  "legacy": [ { "name": "Ubuntu 12 LTS", "image": "ubuntu12" } ] },
-        { "folder": "zorin",  "name": "Zorin",   "legacy": [ { "name": "Debian",        "image": "debian"   } ] },
-        { "folder": "osx",    "name": "OSX",     "legacy": [ { "name": "OSX 10.6",      "image": "osx106"   } ] }
-    ],
+    "os": {
+        "win":    { "name": "Windows 7", "legacy": [ { "name": "XP",            "image": "xp"       },
+                                                     { "name": "Windows Vista", "image": "vista"    },
+                                                     { "name": "Windows 10",    "image": "win10"    } ] },
+        "ubuntu": { "name": "Ubuntu",    "legacy": [ { "name": "Ubuntu 12 LTS", "image": "ubuntu12" } ] },
+        "zorin":  { "name": "Zorin",     "legacy": [ { "name": "Debian",        "image": "debian"   } ] },
+        "osx":    { "name": "OSX",       "legacy": [ { "name": "OSX 10.6",      "image": "osx106"   } ] }
+    },
     "cultures": [
         { "language": "English", "code": "en", "image": "02" },
         { "language": "Dutch",   "code": "nl", "image": "03" },
@@ -54,3 +54,51 @@ window.siteData = {
         { "text": "Dev Tools are always accessible", "image": "23" }
     ]
 };
+
+function slickInit(target) {
+    $(target).slick({
+        lazyLoad: 'ondemand',
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+        centerMode: true,
+        focusOnSelect: true,
+        fade: true
+    });
+}
+
+function slideMaker (os, img, text) {
+    return '<div><img data-lazy="_img/screenshots/'+ os + '/' + img + '.png" alt="' + text + '" /><p>' + text + '</p></div>';
+}
+
+function updateScreenshots (os) {
+    var slideshowDOM = '';
+    var screenshots = siteData.screenshots;
+    var osName = siteData.os[os].name;
+    var legacy = siteData.os[os].legacy;
+    var img = '';
+    var text = '';
+    var el = '';
+    for (var i = 0; i < screenshots.length; i++) {
+        img = screenshots[i].image;
+        text = screenshots[i].text + ' (' + osName + ')';
+        el = slideMaker(os, img, text);
+        slideshowDOM = slideshowDOM + '\n' + el;
+    }
+    for (var j = 0; j < legacy.length; j++) {
+        img = legacy[j].image;
+        text = legacy[j].name;
+        el = slideMaker(os, img, text);
+        slideshowDOM = slideshowDOM + '\n' + el;
+    }
+    var target = "#screenshots .slick";
+    $(target).html(slideshowDOM).removeClass("slick-initialized slick-slider slick-dotted");
+    slickInit(target);
+}
+
+$("#screenshots img").click(function () {
+    var os = $(this).data('os');
+    updateScreenshots(os);
+});
+
+$("#screenshots .win").click();
