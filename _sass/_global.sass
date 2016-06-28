@@ -34,11 +34,50 @@ img
     margin: 0 auto
     background-color: #FFF
 
-.half
+h1,
+h2,
+h3,
+h4
+    font-family: $logoFont
+
+h1
+    margin: 70px 0px 15px 0px
+    font-size: 40px
+
+h2
+    font-size: 32px
+
+h3
+    margin: 15px auto 10px auto
+    font-size: 25px
+
+h4
+    font-size: 21px
+
+a,
+div,
+li,
+p
+    font-size: 18px
+
+
+
+.full,
+.half,
+.thirds
     display: inline-block
-    width: 50%
+    font-size: 18px
     text-align: center
     vertical-align: top
+
+.full
+    width: 100%
+
+.half
+    width: 50%
+
+.thirds
+    width: 33.33333334%
 
 .bg
     &white
@@ -55,3 +94,19 @@ img
         background: $mustard
     &brownsugarketchup
         background: $brownSugarKetchup
+
+.text
+    &white
+        color: #FFF
+    &black
+        color: #000
+    &puppybase
+        color: $puppyBase
+    &puppyspot
+        color: $puppySpot
+    &ketchup
+        color: $ketchup
+    &mustard
+        color: $mustard
+    &brownsugarketchup
+        color: $brownSugarKetchup
