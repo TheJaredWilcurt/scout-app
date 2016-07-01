@@ -1,8 +1,9 @@
 .DS_Store
-<<<<<<< HEAD
 .sass-cache/*
+.sass-cache
 site/vendor/*
 tmp/*
+/tmp
 build/*
 lib/*
 bower_components/*
@@ -10,10 +11,6 @@ node_modules/*
 .idea/*
 RUN.lnk
 thumbs.db
-=======
 .bundle
-.sass-cache
-/tmp
 /build
 *.pfx
->>>>>>> refs/remotes/origin/master
