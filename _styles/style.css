@@ -833,6 +833,7 @@ footer a:hover {
 }
 
 #downloads {
+  font-size: 0px;
   margin: 0px auto;
   padding-bottom: 20px;
 }
@@ -895,7 +896,6 @@ footer a:hover {
 }
 
 #quotes {
-  background: #EBE2DB;
   padding: 30px 0px 40px;
   font-family: Montserrat, sans-serif;
   font-weight: 700;
@@ -979,6 +979,19 @@ footer a:hover {
 
 #contributors a {
   color: #D72A2A;
+}
+
+#cultures [data-os] {
+  cursor: pointer;
+}
+
+#cultures .half {
+  font-size: 16px;
+}
+
+#cultures p {
+  width: 90%;
+  margin: 50px auto 50px;
 }
 
 @media screen and (max-width: 1093px) {
