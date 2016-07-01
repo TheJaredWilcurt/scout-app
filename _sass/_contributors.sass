@@ -1,1 +1,27 @@
-//#contributors
+#contributors
+    padding: 20px 0px 40px 0px
+    h4
+        margin: 40px 0px 20px 0px
+    p
+        margin: 30px 0px 10px 0px
+    ul
+        width: 70%
+        min-width: 300px
+        margin: 0px auto
+        text-align: left
+    li
+        position: relative
+        margin: ($standardTextSize * 0.4) 0px
+        line-height: $standardTextSize * 1.5
+        &:after
+            content: ''
+            position: absolute
+            top: 11px
+            left: -16px
+            display: block
+            width: 4px
+            height: 4px
+            background: $brownSugarKetchup
+            transform: rotate(45deg)
+    a
+        color: $ketchup

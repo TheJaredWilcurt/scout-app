@@ -940,6 +940,47 @@ footer a:hover {
   content: '”';
 }
 
+#contributors {
+  padding: 20px 0px 40px 0px;
+}
+
+#contributors h4 {
+  margin: 40px 0px 20px 0px;
+}
+
+#contributors p {
+  margin: 30px 0px 10px 0px;
+}
+
+#contributors ul {
+  width: 70%;
+  min-width: 300px;
+  margin: 0px auto;
+  text-align: left;
+}
+
+#contributors li {
+  position: relative;
+  margin: 7.2px 0px;
+  line-height: 27px;
+}
+
+#contributors li:after {
+  content: '';
+  position: absolute;
+  top: 11px;
+  left: -16px;
+  display: block;
+  width: 4px;
+  height: 4px;
+  background: #821919;
+  transform: rotate(45deg);
+}
+
+#contributors a {
+  color: #D72A2A;
+}
+
 @media screen and (max-width: 1093px) {
   #downloads {
     max-width: 80%;
