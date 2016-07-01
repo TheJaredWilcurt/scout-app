@@ -1,4 +1,5 @@
 .DS_Store
+<<<<<<< HEAD
 .sass-cache/*
 site/vendor/*
 tmp/*
@@ -9,3 +10,10 @@ node_modules/*
 .idea/*
 RUN.lnk
 thumbs.db
+=======
+.bundle
+.sass-cache
+/tmp
+/build
+*.pfx
+>>>>>>> refs/remotes/origin/master
