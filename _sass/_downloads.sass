@@ -6,6 +6,7 @@
         width: 250px
         display: inline-block
         background: $mustard
+        border: 5px solid transparent
         margin: 10px 10px 10px 10px
         padding: 20px
         color: $ketchup
@@ -15,3 +16,6 @@
         &:hover
             background: $puppySpot
             color: $puppyBase
+        &.selected
+            border-color: $puppySpot
+            box-shadow: 0px 0px 14px -2px $mustard

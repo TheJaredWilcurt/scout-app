@@ -842,6 +842,7 @@ footer a:hover {
   width: 250px;
   display: inline-block;
   background: #FFD255;
+  border: 5px solid transparent;
   margin: 10px 10px 10px 10px;
   padding: 20px;
   color: #D72A2A;
@@ -853,6 +854,11 @@ footer a:hover {
 #downloads a:hover {
   background: #DD8D4B;
   color: #EBE2DB;
+}
+
+#downloads a.selected {
+  border-color: #DD8D4B;
+  box-shadow: 0px 0px 14px -2px #FFD255;
 }
 
 #whatsnew {
@@ -882,17 +888,25 @@ footer a:hover {
   background: rgba(255, 255, 255, 0.5);
 }
 
-#screenshots [data-os] {
+#screenshots [data-os],
+#cultures [data-os] {
   cursor: pointer;
 }
 
-#screenshots .half {
+#screenshots .half,
+#cultures .half {
   font-size: 16px;
 }
 
-#screenshots p {
+#screenshots p,
+#cultures p {
   width: 90%;
   margin: 50px auto 50px;
+}
+
+#screenshots .slick p,
+#cultures .slick p {
+  margin: 0px auto;
 }
 
 #quotes {
@@ -979,19 +993,6 @@ footer a:hover {
 
 #contributors a {
   color: #D72A2A;
-}
-
-#cultures [data-os] {
-  cursor: pointer;
-}
-
-#cultures .half {
-  font-size: 16px;
-}
-
-#cultures p {
-  width: 90%;
-  margin: 50px auto 50px;
 }
 
 @media screen and (max-width: 1093px) {

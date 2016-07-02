@@ -54,5 +54,6 @@ To do list:
 ## Contributors
 
 * [The Jared Wilcurt](http://github.com/TheJaredWilcurt) - Project Management, Site Content, General styles, Image optimization
+* [Luis Rodriguez](https://github.com/LRod-101) - Dynamic GitHub API integration
 * [Kim Sharpe](https://github.com/kimmortal1) - Logo/Branding
 * [Michah Cowell](https://github.com/getmicah) - Gulp setup, Automated Sass processing, JS Minification/Uglification, Hot reloading, LoFi Mockups/Wireframes
