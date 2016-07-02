@@ -797,7 +797,6 @@ section td {
 }
 
 footer {
-  max-width: 850px;
   margin: 0px auto;
   padding: 10px 0px 0px 0px;
   background-color: #FFF;
@@ -995,6 +994,32 @@ footer a:hover {
   color: #D72A2A;
 }
 
+#minreqs {
+  padding: 30px 0px;
+}
+
+#minreqs h4 {
+  color: #FFF;
+}
+
+#minreqs li {
+  font-family: Montserrat, sans-serif;
+  line-height: 24px;
+}
+
+#technology {
+  padding: 30px 8px;
+}
+
+#technology p {
+  font-family: Montserrat, sans-serif;
+}
+
+#technology img {
+  max-height: 128px;
+  margin: 20px auto;
+}
+
 @media screen and (max-width: 1093px) {
   #downloads {
     max-width: 80%;
@@ -1010,5 +1035,11 @@ footer a:hover {
   }
   .slick img {
     max-height: 300px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .thirds {
+    width: 100%;
   }
 }
