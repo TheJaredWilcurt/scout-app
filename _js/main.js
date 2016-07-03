@@ -1,3 +1,7 @@
+/////////////////////////////////////////
+// DOWNLOAD BUTTONS AND VERSION NUMBERS
+/////////////////////////////////////////
+
 var latestRelease = 'https://api.github.com/repos/TheJaredWilcurt/scout-app/releases';
 
 $.get(latestRelease, function (data) {
@@ -12,7 +16,26 @@ $.get(latestRelease, function (data) {
 });
 
 
-// ignore this, temporary storage for site data
+
+
+/////////////////////////////////////////
+// MINIMUM REQUIREMENTS
+/////////////////////////////////////////
+
+$("#minreqs th").click(function () {
+    $("#minreqs th").removeClass('selected');
+    $(this).addClass('selected');
+    var os = $(this).data('os');
+    $("#minreqs td div").hide();
+    $("#minreqs ." + os).show();
+});
+
+
+
+/////////////////////////////////////////
+// SCREENSHOTS
+/////////////////////////////////////////
+
 window.siteData = {
     "os": {
         "win":    { "name": "Windows 7", "legacy": [ { "name": "XP",            "image": "xp"       },
@@ -124,5 +147,13 @@ $("#cultures img").click(function () {
     updateCultures(os);
 });
 
+
+
+/////////////////////////////////////////
+// Replace this after crossbrowser
+// and 64or32 are implmented
+/////////////////////////////////////////
+
 $("#screenshots .win").click();
 $("#cultures .win").click();
+$("#minreqs [data-os='win']").click();

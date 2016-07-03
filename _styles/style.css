@@ -1002,9 +1002,14 @@ footer a:hover {
   color: #FFF;
 }
 
-#minreqs li {
+#minreqs td {
   font-family: Montserrat, sans-serif;
+  font-weight: normal;
   line-height: 24px;
+}
+
+#minreqs strong {
+  font-weight: bold;
 }
 
 #technology {
