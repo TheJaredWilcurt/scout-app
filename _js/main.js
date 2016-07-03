@@ -17,7 +17,6 @@ $.get(latestRelease, function (data) {
 
 
 
-
 /////////////////////////////////////////
 // MINIMUM REQUIREMENTS
 /////////////////////////////////////////
@@ -28,6 +27,17 @@ $("#minreqs th").click(function () {
     var os = $(this).data('os');
     $("#minreqs td div").hide();
     $("#minreqs ." + os).show();
+});
+
+
+
+/////////////////////////////////////////
+// CULTURES SECTION
+/////////////////////////////////////////
+
+$("#translation_instructions").hide();
+$(".showtranslations").click(function () {
+    $("#translation_instructions").slideToggle();
 });
 
 

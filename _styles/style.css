@@ -953,6 +953,22 @@ footer a:hover {
   content: '”';
 }
 
+#translation_instructions {
+  width: 90%;
+  margin: 0px auto;
+  text-align: left;
+}
+
+#translation_instructions h4 {
+  margin: 0px 0px 10px 0px;
+}
+
+#translation_instructions li {
+  list-style-type: decimal;
+  margin: 0px 0px 0px 30px;
+  line-height: 24px;
+}
+
 #contributors {
   padding: 20px 0px 40px 0px;
 }
@@ -1040,6 +1056,14 @@ footer a:hover {
 
 #minreqs strong {
   font-weight: bold;
+}
+
+#mixins {
+  padding: 30px 0px;
+}
+
+#mixins h4 {
+  padding: 0px 0px 20px 0px;
 }
 
 #technology {
