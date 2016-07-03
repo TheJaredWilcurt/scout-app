@@ -999,13 +999,43 @@ footer a:hover {
 }
 
 #minreqs h4 {
+  padding: 0px 0px 20px 0px;
   color: #FFF;
 }
 
+#minreqs table {
+  min-height: 185px;
+}
+
+#minreqs th {
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+  border-radius: 4px;
+  line-height: 50px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+#minreqs th:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+#minreqs th.selected {
+  background: #EBE2DB;
+}
+
+#minreqs th.selected:hover {
+  background: #EBE2DB;
+}
+
 #minreqs td {
+  padding: 8px 0px 0px 10px;
   font-family: Montserrat, sans-serif;
   font-weight: normal;
   line-height: 24px;
+  text-align: left;
+  vertical-align: top;
 }
 
 #minreqs strong {
