@@ -164,6 +164,26 @@ $("#cultures img").click(function () {
 // and 64or32 are implmented
 /////////////////////////////////////////
 
+// On page load, crossbrowser.js will add in classes to the <html> tag like: "webkit chrome chrome51 win win7 js orientation_landscape maxw_1440"
+// From that we can know what OS the user is on and click on specific items on the page so they will auto-show the correct stuff
+
+// Here are all of the classes we can check for:
+// Firefox, IE, Opera, Safari, Chrome, Konqueror, Iron, ie6, ie7, ie8, ie9
+// Webkit, Mozilla, Gecko
+// Mac, Win, Win8, Win7, Vista, WinXP, Win2k, WinNT, FreeBSD, Linux, x11
+// Ipod, Ipad, Iphone, WebTV, Blackberry, Android, J2me, RIM Playbook, mobile
+
+
+// On page load 64or32-jquery.min.js will add in one of the following classes to the <html> tag: unknown, mobile, arch32, arch64
+// From that we can know if someone is on 32 or 64 bit OS. This is really only useful for the linux downloads.
+
+// We should be updating the following:
+//
+// * Add a class of "selected" to the correct download button
+// * Which screenshots are being shown by default in the Screenshots section
+// * Which screenshots are being shown in the Cultures/languages section
+// * Which minimum system reqirements are shown by default
+
 $("#screenshots .win").click();
 $("#cultures .win").click();
 $("#minreqs [data-os='win']").click();
