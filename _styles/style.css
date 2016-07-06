@@ -1,6 +1,7 @@
 @charset "UTF-8";
-@import url(https://fonts.googleapis.com/css?family=Rubik+One);
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url("https://fonts.googleapis.com/css?family=Rubik+One");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+@import url("https://fonts.googleapis.com/css?family=Share+Tech+Mono");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -636,6 +637,21 @@ p {
   font-size: 18px;
 }
 
+em {
+  color: rgba(0, 0, 0, 0.7);
+  font-style: italic;
+}
+
+code {
+  font-family: "Share Tech Mono", monospace;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.hide {
+  display: none;
+}
+
 .full,
 .half,
 .thirds {
@@ -761,7 +777,6 @@ section {
 section table {
   max-width: 740px;
   margin: 0px auto;
-  font-family: Montserrat, sans-serif;
   font-size: 22px;
 }
 
@@ -871,6 +886,10 @@ footer a:hover {
   text-align: center;
 }
 
+#whatsnew table {
+  font-family: "Montserrat", sans-serif;
+}
+
 #whatsnew thead {
   color: #821919;
 }
@@ -914,7 +933,7 @@ footer a:hover {
 
 #quotes {
   padding: 30px 0px 40px;
-  font-family: Montserrat, sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
 }
 
@@ -1051,6 +1070,7 @@ footer a:hover {
 
 #minreqs table {
   min-height: 185px;
+  font-family: "Montserrat", sans-serif;
 }
 
 #minreqs th {
@@ -1077,7 +1097,6 @@ footer a:hover {
 
 #minreqs td {
   padding: 8px 0px 0px 10px;
-  font-family: Montserrat, sans-serif;
   font-weight: normal;
   line-height: 24px;
   text-align: left;
@@ -1092,8 +1111,79 @@ footer a:hover {
   padding: 30px 0px;
 }
 
+#mixins a {
+  color: #821919;
+}
+
+#mixins h1 {
+  margin: 0px;
+  padding: 60px 0px 40px 0px;
+  color: #DD8D4B;
+  text-align: center;
+}
+
 #mixins h4 {
   padding: 0px 0px 20px 0px;
+}
+
+#mixins .table {
+  max-width: 740px;
+  margin: 20px auto 20px;
+  font-size: 22px;
+}
+
+#mixins .table a {
+  color: #D72A2A;
+}
+
+#mixins .thead {
+  padding: 0px 0px 0px 0px;
+  color: #821919;
+}
+
+#mixins .tr {
+  font-size: 0px;
+}
+
+#mixins .tr:nth-of-type(even) {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+#mixins .tr:last-of-type {
+  border-radius: 0px 0px 6px 6px;
+}
+
+#mixins .th {
+  border-bottom: 2px solid #000;
+  border-color: #821919;
+  padding-bottom: 8px;
+  font-size: 30px;
+  font-weight: bold;
+  vertical-align: bottom;
+}
+
+#mixins .tbody .tr:first-of-type .td {
+  padding-top: 11px;
+}
+
+#mixins .td {
+  padding: 0px 4px;
+  line-height: 37px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+#mixins .td a {
+  font-size: 18px;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+#mixins .showmore,
+#mixins .showless {
+  color: #D72A2A;
+  text-align: center;
+  cursor: pointer;
 }
 
 #themes p {
@@ -1121,7 +1211,7 @@ footer a:hover {
 }
 
 #technology p {
-  font-family: Montserrat, sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 #technology img {
@@ -1135,6 +1225,25 @@ footer a:hover {
   }
   .half {
     width: 100%;
+  }
+  #mixins .half {
+    width: 50%;
+  }
+  #mixins .table {
+    font-size: 17.6px;
+  }
+  #mixins .th {
+    font-size: 24px;
+  }
+  #mixins .td {
+    padding: 6px 4px 5px;
+    line-height: 20px;
+  }
+  #mixins .td a {
+    font-size: 16px;
+  }
+  #mixins code {
+    font-size: 16px;
   }
   section table {
     font-size: 17.6px;

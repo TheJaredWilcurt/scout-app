@@ -18,6 +18,24 @@ $.get(latestRelease, function (data) {
 
 
 /////////////////////////////////////////
+// SUPPORTED MIXINS
+/////////////////////////////////////////
+
+$('.showmore').click(function () {
+    $('.limited').slideUp('slow');
+    $('.complete').slideDown('slow');
+});
+
+$('.showless').click(function () {
+    $('.complete').slideUp();
+    $('.limited').slideDown();
+});
+
+$('.showless').click();
+
+
+
+/////////////////////////////////////////
 // MINIMUM REQUIREMENTS
 /////////////////////////////////////////
 
