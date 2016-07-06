@@ -888,23 +888,27 @@ footer a:hover {
 }
 
 #screenshots [data-os],
-#cultures [data-os] {
+#cultures [data-os],
+#themes [data-os] {
   cursor: pointer;
 }
 
 #screenshots .half,
-#cultures .half {
+#cultures .half,
+#themes .half {
   font-size: 16px;
 }
 
 #screenshots p,
-#cultures p {
+#cultures p,
+#themes p {
   width: 90%;
   margin: 50px auto 50px;
 }
 
 #screenshots .slick p,
-#cultures .slick p {
+#cultures .slick p,
+#themes .slick p {
   margin: 0px auto;
 }
 
@@ -1090,6 +1094,26 @@ footer a:hover {
 
 #mixins h4 {
   padding: 0px 0px 20px 0px;
+}
+
+#themes p {
+  margin: 30px 0px;
+}
+
+#themes .osselect {
+  margin: 30px 0px 15px 0px;
+}
+
+#themes .osselect img {
+  margin-bottom: 15px;
+}
+
+#themes .osselect small {
+  display: block;
+}
+
+#themes a {
+  color: #821919;
 }
 
 #technology {
