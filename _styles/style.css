@@ -488,7 +488,7 @@ th {
   position: relative;
   bottom: 75px;
   display: block;
-  width: 70%;
+  width: 90%;
   height: 0px;
   margin: 0px auto;
   padding: 0px;
@@ -953,9 +953,35 @@ footer a:hover {
   content: '”';
 }
 
+#cultures h3 {
+  margin: 35px 0px;
+}
+
+#cultures p {
+  margin: 30px 0px;
+}
+
+#cultures .osselect {
+  margin: 30px 0px 15px 0px;
+}
+
+#cultures .osselect img {
+  margin-bottom: 15px;
+}
+
+#cultures .osselect small {
+  display: block;
+}
+
+#cultures a {
+  color: #821919;
+}
+
 #translation_instructions {
-  width: 90%;
+  width: 91%;
+  border-radius: 6px;
   margin: 0px auto;
+  padding: 10px 10px;
   text-align: left;
 }
 

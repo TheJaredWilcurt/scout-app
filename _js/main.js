@@ -147,6 +147,24 @@ function updateCultures (os) {
     slickInit(target);
 }
 
+function updateThemes (os) {
+    var themes = siteData.themes;
+    var osName = siteData.os[os].name;
+    var slideshowDOM = '';
+    var img = '';
+    var text = '';
+    var el = '';
+    for (var i = 0; i < themes.length; i++) {
+        img = themes[i].image;
+        text = themes[i].theme + ' (' + osName + ')';
+        el = slideMaker(os, img, text);
+        slideshowDOM = slideshowDOM + '\n' + el;
+    }
+    var target = "#themes .slick";
+    $(target).html(slideshowDOM).removeClass("slick-initialized slick-slider slick-dotted");
+    slickInit(target);
+}
+
 $("#screenshots img").click(function () {
     var os = $(this).data('os');
     updateScreenshots(os);
@@ -155,6 +173,11 @@ $("#screenshots img").click(function () {
 $("#cultures img").click(function () {
     var os = $(this).data('os');
     updateCultures(os);
+});
+
+$("#themes img").click(function () {
+    var os = $(this).data('os');
+    updateThemes(os);
 });
 
 
@@ -182,8 +205,10 @@ $("#cultures img").click(function () {
 // * Add a class of "selected" to the correct download button
 // * Which screenshots are being shown by default in the Screenshots section
 // * Which screenshots are being shown in the Cultures/languages section
+// * Which screenshots are being shown in the Themes section
 // * Which minimum system reqirements are shown by default
 
 $("#screenshots .win").click();
 $("#cultures .win").click();
+$("#themes .win").click();
 $("#minreqs [data-os='win']").click();
