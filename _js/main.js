@@ -2,12 +2,35 @@ var latestRelease = 'https://api.github.com/repos/TheJaredWilcurt/scout-app/rele
 
 $.get(latestRelease, function (data) {
     // Loop through all releases
+    for(var i = 0; i < data.length; i++){
+        var num = data[i].assets.length;
+        var a = data[i].assets[0].browser_download_url;
+        var b = data[i].assets[1].browser_download_url;    
+        var c = data[i].assets[2].browser_download_url;
+        var d = data[i].assets[3].browser_download_url;
+        var e = a.toLowerCase().split('/');
+        var f = b.toLowerCase().split('/');
+        var g = c.toLowerCase().split('/');
+        var h = d.toLowerCase().split('/');
+
+        //for(var z = 0; z < 4; z++){
+
+        //}
+        if (num > 3){
+            $("#downloads .lin32").attr('href', data[i].assets[0].browser_download_url);
+            $("#downloads .Lin64").attr('href', data[i].assets[1].browser_download_url);
+            $("#downloads .OSXupdate").attr('href', data[i].assets[2].browser_download_url);
+            $("#downloads .WindowUpdate").attr('href', data[i].assets[3].browser_download_url);
+        }
+        debugger;
+    };
+    //turn link into string, use split to turn into array, find correct OS and assign it to lines 8-11
     // find the latest release with downloads
     // update the 4 OS download buttons to have correct links
     // update the version number in the version comparison table
     console.log(data);
     // test
-    // bonus: in the title tag for the download button, denote the file size of the download in MB
+    // bonus: in the title tag for the download button, denote the file size of the download in MB, Similar to target but it's title = 
     // bonus: in the title tag for the download button, denote the actual filename
 });
 
