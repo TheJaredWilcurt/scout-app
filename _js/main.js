@@ -8,10 +8,14 @@ $.get(latestRelease, function (data) {
         var b = data[i].assets[1].browser_download_url;    
         var c = data[i].assets[2].browser_download_url;
         var d = data[i].assets[3].browser_download_url;
-        var e = a.toLowerCase().split('/');
-        var f = b.toLowerCase().split('/');
-        var g = c.toLowerCase().split('/');
-        var h = d.toLowerCase().split('/');
+        /the/gi
+
+
+
+        //var e = a.toLowerCase().split('/');
+        //var f = b.toLowerCase().split('/');
+        //var g = c.toLowerCase().split('/');
+        //var h = d.toLowerCase().split('/');
 
         //for(var z = 0; z < 4; z++){
 

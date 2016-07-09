@@ -1,6 +1,7 @@
 @charset "UTF-8";
-@import url(https://fonts.googleapis.com/css?family=Rubik+One);
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url("https://fonts.googleapis.com/css?family=Rubik+One");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+@import url("https://fonts.googleapis.com/css?family=Share+Tech+Mono");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -488,7 +489,7 @@ th {
   position: relative;
   bottom: 75px;
   display: block;
-  width: 70%;
+  width: 90%;
   height: 0px;
   margin: 0px auto;
   padding: 0px;
@@ -636,6 +637,21 @@ p {
   font-size: 18px;
 }
 
+em {
+  color: rgba(0, 0, 0, 0.7);
+  font-style: italic;
+}
+
+code {
+  font-family: "Share Tech Mono", monospace;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.hide {
+  display: none;
+}
+
 .full,
 .half,
 .thirds {
@@ -761,7 +777,6 @@ section {
 section table {
   max-width: 740px;
   margin: 0px auto;
-  font-family: Montserrat, sans-serif;
   font-size: 22px;
 }
 
@@ -797,7 +812,6 @@ section td {
 }
 
 footer {
-  max-width: 850px;
   margin: 0px auto;
   padding: 10px 0px 0px 0px;
   background-color: #FFF;
@@ -833,6 +847,7 @@ footer a:hover {
 }
 
 #downloads {
+  font-size: 0px;
   margin: 0px auto;
   padding-bottom: 20px;
 }
@@ -841,6 +856,7 @@ footer a:hover {
   width: 250px;
   display: inline-block;
   background: #FFD255;
+  border: 5px solid transparent;
   margin: 10px 10px 10px 10px;
   padding: 20px;
   color: #D72A2A;
@@ -854,6 +870,11 @@ footer a:hover {
   color: #EBE2DB;
 }
 
+#downloads a.selected {
+  border-color: #DD8D4B;
+  box-shadow: 0px 0px 14px -2px #FFD255;
+}
+
 #whatsnew {
   padding-bottom: 40px;
 }
@@ -863,6 +884,10 @@ footer a:hover {
   padding: 60px 0px 40px 0px;
   color: #DD8D4B;
   text-align: center;
+}
+
+#whatsnew table {
+  font-family: "Montserrat", sans-serif;
 }
 
 #whatsnew thead {
@@ -881,23 +906,34 @@ footer a:hover {
   background: rgba(255, 255, 255, 0.5);
 }
 
-#screenshots [data-os] {
+#screenshots [data-os],
+#cultures [data-os],
+#themes [data-os] {
   cursor: pointer;
 }
 
-#screenshots .half {
+#screenshots .half,
+#cultures .half,
+#themes .half {
   font-size: 16px;
 }
 
-#screenshots p {
+#screenshots p,
+#cultures p,
+#themes p {
   width: 90%;
   margin: 50px auto 50px;
 }
 
+#screenshots .slick p,
+#cultures .slick p,
+#themes .slick p {
+  margin: 0px auto;
+}
+
 #quotes {
-  background: #EBE2DB;
   padding: 30px 0px 40px;
-  font-family: Montserrat, sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
 }
 
@@ -938,6 +974,48 @@ footer a:hover {
 
 #quotes q:after {
   content: '”';
+}
+
+#cultures h3 {
+  margin: 35px 0px;
+}
+
+#cultures p {
+  margin: 30px 0px;
+}
+
+#cultures .osselect {
+  margin: 30px 0px 15px 0px;
+}
+
+#cultures .osselect img {
+  margin-bottom: 15px;
+}
+
+#cultures .osselect small {
+  display: block;
+}
+
+#cultures a {
+  color: #821919;
+}
+
+#translation_instructions {
+  width: 91%;
+  border-radius: 6px;
+  margin: 0px auto;
+  padding: 10px 10px;
+  text-align: left;
+}
+
+#translation_instructions h4 {
+  margin: 0px 0px 10px 0px;
+}
+
+#translation_instructions li {
+  list-style-type: decimal;
+  margin: 0px 0px 0px 30px;
+  line-height: 24px;
 }
 
 #contributors {
@@ -981,12 +1059,191 @@ footer a:hover {
   color: #D72A2A;
 }
 
+#minreqs {
+  padding: 30px 0px;
+}
+
+#minreqs h4 {
+  padding: 0px 0px 20px 0px;
+  color: #FFF;
+}
+
+#minreqs table {
+  min-height: 185px;
+  font-family: "Montserrat", sans-serif;
+}
+
+#minreqs th {
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+  border-radius: 4px;
+  line-height: 50px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+#minreqs th:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+#minreqs th.selected {
+  background: #EBE2DB;
+}
+
+#minreqs th.selected:hover {
+  background: #EBE2DB;
+}
+
+#minreqs td {
+  padding: 8px 0px 0px 10px;
+  font-weight: normal;
+  line-height: 24px;
+  text-align: left;
+  vertical-align: top;
+}
+
+#minreqs strong {
+  font-weight: bold;
+}
+
+#mixins {
+  padding: 30px 0px;
+}
+
+#mixins a {
+  color: #821919;
+}
+
+#mixins h1 {
+  margin: 0px;
+  padding: 60px 0px 40px 0px;
+  color: #DD8D4B;
+  text-align: center;
+}
+
+#mixins h4 {
+  padding: 0px 0px 20px 0px;
+}
+
+#mixins .table {
+  max-width: 740px;
+  margin: 20px auto 20px;
+  font-size: 22px;
+}
+
+#mixins .table a {
+  color: #D72A2A;
+}
+
+#mixins .thead {
+  padding: 0px 0px 0px 0px;
+  color: #821919;
+}
+
+#mixins .tr {
+  font-size: 0px;
+}
+
+#mixins .tr:nth-of-type(even) {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+#mixins .tr:last-of-type {
+  border-radius: 0px 0px 6px 6px;
+}
+
+#mixins .th {
+  border-bottom: 2px solid #000;
+  border-color: #821919;
+  padding-bottom: 8px;
+  font-size: 30px;
+  font-weight: bold;
+  vertical-align: bottom;
+}
+
+#mixins .tbody .tr:first-of-type .td {
+  padding-top: 11px;
+}
+
+#mixins .td {
+  padding: 0px 4px;
+  line-height: 37px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+#mixins .td a {
+  font-size: 18px;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+#mixins .showmore,
+#mixins .showless {
+  color: #D72A2A;
+  text-align: center;
+  cursor: pointer;
+}
+
+#themes p {
+  margin: 30px 0px;
+}
+
+#themes .osselect {
+  margin: 30px 0px 15px 0px;
+}
+
+#themes .osselect img {
+  margin-bottom: 15px;
+}
+
+#themes .osselect small {
+  display: block;
+}
+
+#themes a {
+  color: #821919;
+}
+
+#technology {
+  padding: 30px 8px;
+}
+
+#technology p {
+  font-family: "Montserrat", sans-serif;
+}
+
+#technology img {
+  max-height: 128px;
+  margin: 20px auto;
+}
+
 @media screen and (max-width: 1093px) {
   #downloads {
     max-width: 80%;
   }
   .half {
     width: 100%;
+  }
+  #mixins .half {
+    width: 50%;
+  }
+  #mixins .table {
+    font-size: 17.6px;
+  }
+  #mixins .th {
+    font-size: 24px;
+  }
+  #mixins .td {
+    padding: 6px 4px 5px;
+    line-height: 20px;
+  }
+  #mixins .td a {
+    font-size: 16px;
+  }
+  #mixins code {
+    font-size: 16px;
   }
   section table {
     font-size: 17.6px;
@@ -996,5 +1253,11 @@ footer a:hover {
   }
   .slick img {
     max-height: 300px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .thirds {
+    width: 100%;
   }
 }

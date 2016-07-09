@@ -72,11 +72,8 @@ gulp.task('open', function () {
     if (OS == 'linux')  { executable = 'xdg-open '; }
     if (OS == 'win32')  { exectuable = 'explorer '; }
 
-    function runCMD (executableAndArgs) {
-        require("child_process").exec( executableAndArgs );
-    }
-
-    runCMD(exectuable + url);
+    //Run the OS specific command to open the url in the default browser
+    require("child_process").exec( exectuable + url );
 });
 
 gulp.task('default', ['sass', 'lint', 'uglify', 'watch', 'serve', 'open']);

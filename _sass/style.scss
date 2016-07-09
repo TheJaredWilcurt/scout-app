@@ -1,8 +1,9 @@
 @charset "utf-8";                // Character type for the stylesheet
 
 //Webfonts
-@import url(https://fonts.googleapis.com/css?family=Rubik+One);
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url('https://fonts.googleapis.com/css?family=Rubik+One');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+@import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono');
 
 //Stuff that goes at the start
 @import "_var.sass";             // Sass Variables and Mixins - Does not effect page, but other Sass files reference this file.
@@ -24,7 +25,12 @@
 @import "_whatsnew.sass";        // The version comparrison table
 @import "_screenshots.sass";     // Screenshots of the app
 @import "_quotes.sass";          // Quotes about the app
+@import "_cultures.sass";        // Multi language support
 @import "_contributors.sass";    // All the little helpers
+@import "_minreqs.sass";         // Minimum requirements to run Scout-App
+@import "_mixins.sass";          // Built in supported mixins
+@import "_themes.sass";          // Themese screenshots
+@import "_technology.sass";      // Shoulders of giants
 
 //Stuff that goes at the end
 @import "_mediaqueries.sass";    // Adjusts the CSS of elements depending on browser or device resolution. Adaptive Web Design.
