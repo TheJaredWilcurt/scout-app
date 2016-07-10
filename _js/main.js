@@ -1,5 +1,9 @@
-var latestRelease = 'https://api.github.com/repos/TheJaredWilcurt/scout-app/releases';
+/////////////////////////////////////////
+// DOWNLOAD BUTTONS AND VERSION NUMBERS
+/////////////////////////////////////////
 
+var latestRelease = 'https://api.github.com/repos/TheJaredWilcurt/scout-app/releases';
+/*
 $.get(latestRelease, function (data) {
     // Loop through all releases
     for(var i = 0; i < data.length; i++){
@@ -9,8 +13,6 @@ $.get(latestRelease, function (data) {
         var c = data[i].assets[2].browser_download_url;
         var d = data[i].assets[3].browser_download_url;
         /the/gi
-
-
 
         //var e = a.toLowerCase().split('/');
         //var f = b.toLowerCase().split('/');
@@ -37,6 +39,56 @@ $.get(latestRelease, function (data) {
     // bonus: in the title tag for the download button, denote the file size of the download in MB, Similar to target but it's title = 
     // bonus: in the title tag for the download button, denote the actual filename
 });
+*/
+
+
+
+/////////////////////////////////////////
+// SUPPORTED MIXINS
+/////////////////////////////////////////
+
+$('.showmore').click(function () {
+    $('.limited').slideUp('slow');
+    $('.complete').slideDown('slow');
+});
+
+$('.showless').click(function () {
+    $('.complete').slideUp();
+    $('.limited').slideDown();
+});
+
+$('.showless').click();
+
+
+
+/////////////////////////////////////////
+// MINIMUM REQUIREMENTS
+/////////////////////////////////////////
+
+$("#minreqs th").click(function () {
+    $("#minreqs th").removeClass('selected');
+    $(this).addClass('selected');
+    var os = $(this).data('os');
+    $("#minreqs td div").hide();
+    $("#minreqs ." + os).show();
+});
+
+
+
+/////////////////////////////////////////
+// CULTURES SECTION
+/////////////////////////////////////////
+
+$("#translation_instructions").hide();
+$(".showtranslations").click(function () {
+    $("#translation_instructions").slideToggle();
+});
+
+
+
+/////////////////////////////////////////
+// SCREENSHOTS
+/////////////////////////////////////////
 
 
 // ignore this, temporary storage for site data
@@ -82,7 +134,7 @@ window.siteData = {
     ]
 };
 
-function slickInit(target) {
+function slickInit (target) {
     $(target).slick({
         lazyLoad: 'ondemand',
         slidesToShow: 1,
@@ -123,9 +175,86 @@ function updateScreenshots (os) {
     slickInit(target);
 }
 
+function updateCultures (os) {
+    var languages = siteData.cultures;
+    var osName = siteData.os[os].name;
+    var slideshowDOM = '';
+    var img = '';
+    var text = '';
+    var el = '';
+    for (var i = 0; i < languages.length; i++) {
+        img = languages[i].image;
+        text = languages[i].language + ' (' + osName + ')';
+        el = slideMaker(os, img, text);
+        slideshowDOM = slideshowDOM + '\n' + el;
+    }
+    var target = "#cultures .slick";
+    $(target).html(slideshowDOM).removeClass("slick-initialized slick-slider slick-dotted");
+    slickInit(target);
+}
+
+function updateThemes (os) {
+    var themes = siteData.themes;
+    var osName = siteData.os[os].name;
+    var slideshowDOM = '';
+    var img = '';
+    var text = '';
+    var el = '';
+    for (var i = 0; i < themes.length; i++) {
+        img = themes[i].image;
+        text = themes[i].theme + ' (' + osName + ')';
+        el = slideMaker(os, img, text);
+        slideshowDOM = slideshowDOM + '\n' + el;
+    }
+    var target = "#themes .slick";
+    $(target).html(slideshowDOM).removeClass("slick-initialized slick-slider slick-dotted");
+    slickInit(target);
+}
+
 $("#screenshots img").click(function () {
     var os = $(this).data('os');
     updateScreenshots(os);
 });
 
+$("#cultures img").click(function () {
+    var os = $(this).data('os');
+    updateCultures(os);
+});
+
+$("#themes img").click(function () {
+    var os = $(this).data('os');
+    updateThemes(os);
+});
+
+
+
+/////////////////////////////////////////
+// Replace this after crossbrowser
+// and 64or32 are implmented
+/////////////////////////////////////////
+
+// On page load, crossbrowser.js will add in classes to the <html> tag like: "webkit chrome chrome51 win win7 js orientation_landscape maxw_1440"
+// From that we can know what OS the user is on and click on specific items on the page so they will auto-show the correct stuff
+
+// Here are all of the classes we can check for:
+// Firefox, IE, Opera, Safari, Chrome, Konqueror, Iron, ie6, ie7, ie8, ie9
+// Webkit, Mozilla, Gecko
+// Mac, Win, Win8, Win7, Vista, WinXP, Win2k, WinNT, FreeBSD, Linux, x11
+// Ipod, Ipad, Iphone, WebTV, Blackberry, Android, J2me, RIM Playbook, mobile
+
+
+// On page load 64or32-jquery.min.js will add in one of the following classes to the <html> tag: unknown, mobile, arch32, arch64
+// From that we can know if someone is on 32 or 64 bit OS. This is really only useful for the linux downloads.
+
+// We should be updating the following:
+//
+// * Add a class of "selected" to the correct download button
+// * Which screenshots are being shown by default in the Screenshots section
+// * Which screenshots are being shown in the Cultures/languages section
+// * Which screenshots are being shown in the Themes section
+// * Which minimum system reqirements are shown by default
+
 $("#screenshots .win").click();
+$("#cultures .win").click();
+$("#themes .win").click();
+$("#minreqs [data-os='win']").click();
