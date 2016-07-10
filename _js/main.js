@@ -8,23 +8,62 @@ $.get(latestRelease, function (data) {
         var b = data[i].assets[1].browser_download_url;    
         var c = data[i].assets[2].browser_download_url;
         var d = data[i].assets[3].browser_download_url;
-        /the/gi
+        
 
 
+        var updateLIN32;
+        var updateLIN64;
+        var updateOSX;
+        var updateWIN;
 
-        //var e = a.toLowerCase().split('/');
-        //var f = b.toLowerCase().split('/');
-        //var g = c.toLowerCase().split('/');
-        //var h = d.toLowerCase().split('/');
+        if (/LIN32/gi.test(a)){
+            updateLIN32 = a;
+        } else if (/LIN32/gi.test(b)){
+            updateLIN32 = b;
+        } else if (/LIN32/gi.test(c)){
+            updateLIN32 = c;  
+        } else if (/LIN32/gi.test(d)){
+            updateLIN32 = d;
+        }
 
-        //for(var z = 0; z < 4; z++){
+        if (/LIN64/gi.test(a)){
+            updateLIN64 = a;
+        } else if (/LIN64/gi.test(b)){
+            updateLIN64 = b;
+        } else if (/LIN64/gi.test(c)){
+            updateLIN64 = c;  
+        } else if (/LIN64/gi.test(d)){
+            updateLIN64 = d;
+        }
 
-        //}
+        if (/OSX/gi.test(a)){
+            updateOSX = a;
+        } else if (/OSX/gi.test(b)){
+            updateOSX = b;
+        } else if (/OSX/gi.test(c)){
+            updateOSX = c;  
+        } else if (/OSX/gi.test(d)){
+            updateOSX = d;
+        }
+
+        if (/WIN/gi.test(a)){
+            updateWIN = a;
+        } else if (/WIN/gi.test(b)){
+            updateWIN = b;
+        } else if (/WIN/gi.test(c)){
+            updateWIN = c;  
+        } else if (/WIN/gi.test(d)){
+            updateWIN = d;
+        }
+        
+
+        
+        // Below I'll need to assign the right url to the button using /OS/gi.test()
         if (num > 3){
-            $("#downloads .lin32").attr('href', data[i].assets[0].browser_download_url);
-            $("#downloads .Lin64").attr('href', data[i].assets[1].browser_download_url);
-            $("#downloads .OSXupdate").attr('href', data[i].assets[2].browser_download_url);
-            $("#downloads .WindowUpdate").attr('href', data[i].assets[3].browser_download_url);
+            $("#downloads .lin32").attr('href', updateLIN32);
+            $("#downloads .Lin64").attr('href', updateLIN64);
+            $("#downloads .OSXupdate").attr('href', updateOSX);
+            $("#downloads .WindowUpdate").attr('href', updateWIN);
         }
         debugger;
     };
