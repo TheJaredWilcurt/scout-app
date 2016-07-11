@@ -3,69 +3,74 @@ var latestRelease = 'https://api.github.com/repos/TheJaredWilcurt/scout-app/rele
 $.get(latestRelease, function (data) {
     // Loop through all releases
     for(var i = 0; i < data.length; i++){
-        var num = data[i].assets.length;
-        var a = data[i].assets[0].browser_download_url;
-        var b = data[i].assets[1].browser_download_url;    
-        var c = data[i].assets[2].browser_download_url;
-        var d = data[i].assets[3].browser_download_url;
-        
+        var numDownloads = data[i].assets.length;
+        if (numDownloads > 3) {
+            var a = data[i].assets[0].browser_download_url.toLowerCase();
+            var b = data[i].assets[1].browser_download_url.toLowerCase();
+            var c = data[i].assets[2].browser_download_url.toLowerCase();
+            var d = data[i].assets[3].browser_download_url.toLowerCase();
+            console.log(a);
+            console.log(b);
+            console.log(c);
+            console.log(d);
 
+            //var versionArray = a.split('/'); //I'll use this aaray to locate the version number
+            //var versionNum = versionArray[7]; //Only 2.0.1-beta2
 
-        var updateLIN32;
-        var updateLIN64;
-        var updateOSX;
-        var updateWIN;
+            var updateLIN32;
+            var updateLIN64;
+            var updateOSX;
+            var updateWIN;
 
-        if (/LIN32/gi.test(a)){
-            updateLIN32 = a;
-        } else if (/LIN32/gi.test(b)){
-            updateLIN32 = b;
-        } else if (/LIN32/gi.test(c)){
-            updateLIN32 = c;  
-        } else if (/LIN32/gi.test(d)){
-            updateLIN32 = d;
-        }
+            //Make a loop that goes through each
+            if (/lin32/gi.test(a)){
+                updateLIN32 = a;
+            } else if (/lin32/gi.test(b)){
+                updateLIN32 = b;
+            } else if (/lin32/gi.test(c)){
+                updateLIN32 = c;  
+            } else if (/lin32/gi.test(d)){
+                updateLIN32 = d;
+            }
 
-        if (/LIN64/gi.test(a)){
-            updateLIN64 = a;
-        } else if (/LIN64/gi.test(b)){
-            updateLIN64 = b;
-        } else if (/LIN64/gi.test(c)){
-            updateLIN64 = c;  
-        } else if (/LIN64/gi.test(d)){
-            updateLIN64 = d;
-        }
+            if (/lin64/gi.test(a)){
+                updateLIN64 = a;
+            } else if (/lin64/gi.test(b)){
+                updateLIN64 = b;
+            } else if (/lin64/gi.test(c)){
+                updateLIN64 = c;  
+            } else if (/lin64/gi.test(d)){
+                updateLIN64 = d;
+            }
 
-        if (/OSX/gi.test(a)){
-            updateOSX = a;
-        } else if (/OSX/gi.test(b)){
-            updateOSX = b;
-        } else if (/OSX/gi.test(c)){
-            updateOSX = c;  
-        } else if (/OSX/gi.test(d)){
-            updateOSX = d;
-        }
+            if (/osx/gi.test(a)){
+                updateOSX = a;
+            } else if (/osx/gi.test(b)){
+                updateOSX = b;
+            } else if (/osx/gi.test(c)){
+                updateOSX = c;  
+            } else if (/osx/gi.test(d)){
+                updateOSX = d;
+            }
 
-        if (/WIN/gi.test(a)){
-            updateWIN = a;
-        } else if (/WIN/gi.test(b)){
-            updateWIN = b;
-        } else if (/WIN/gi.test(c)){
-            updateWIN = c;  
-        } else if (/WIN/gi.test(d)){
-            updateWIN = d;
-        }
-        
+            if (/win/gi.test(a)){
+                updateWIN = a;
+            } else if (/win/gi.test(b)){
+                updateWIN = b;
+            } else if (/win/gi.test(c)){
+                updateWIN = c;  
+            } else if (/win/gi.test(d)){
+                updateWIN = d;
+            }
 
-        
         // Below I'll need to assign the right url to the button using /OS/gi.test()
-        if (num > 3){
             $("#downloads .lin32").attr('href', updateLIN32);
-            $("#downloads .Lin64").attr('href', updateLIN64);
-            $("#downloads .OSXupdate").attr('href', updateOSX);
-            $("#downloads .WindowUpdate").attr('href', updateWIN);
+            $("#downloads .lin64").attr('href', updateLIN64);
+            $("#downloads .osxupdate").attr('href', updateOSX);
+            $("#downloads .windowsupdate").attr('href', updateWIN);
+            return;
         }
-        debugger;
+
     };
     //turn link into string, use split to turn into array, find correct OS and assign it to lines 8-11
     // find the latest release with downloads
