@@ -4,24 +4,17 @@
 
 var latestRelease = 'https://api.github.com/repos/TheJaredWilcurt/scout-app/releases';
 
-$.get(latestRelease, function (data) {
-
-    //terminology
-    //data = releases
-    //assets = downloads
+$.get(latestRelease, function (releases) {
 
     // Loop through all releases
-    for (var i = 0; i < data.length; i++) {
+    for (var i = 0; i < releases.length; i++) {
+        var currentRelease = releases[i];
         //number of downloads in this release
-        var numDownloads = data[i].assets.length;
+        var downloads = currentRelease.assets;
+        var numDownloads = downloads.length;
         
         //verify this release has more than three downloads
         if (numDownloads > 3) {
-
-           //loop through all the downloads
-           //check each download to see if it is for win/osx/lin32/lin64
-           //update the stuff on the page if that download relates to it
-           //comment every line
 
            //define variables that will hold the correct update link
             var updateLIN32;
@@ -30,8 +23,9 @@ $.get(latestRelease, function (data) {
             var updateWIN;
 
             //loop through all downloads and assign the correct link to each update variable defined above
-            for (var j = 0; j < numDownloads; j++){
-                var downLoadLink = data[i].assets[j].browser_download_url.toLowerCase();
+            for (var j = 0; j < numDownloads; j++) {
+                var currentDownload = downloads[j];
+                var downLoadLink = currentDownload.browser_download_url.toLowerCase();
                 if (/lin32/gi.test(downLoadLink)){
                     updateLIN32 = downLoadLink;
                 } else if (/lin64/gi.test(downLoadLink)){
@@ -45,18 +39,16 @@ $.get(latestRelease, function (data) {
 
             //version number update work
             //I'll use this aaray to locate the version number
-            var dataString = downLoadLink.split('/');
-            //var versionNum = versionArray[7]; //Only 2.0.1-beta2
-            var vNum = dataString[7];
-            var versionNum = vNum.replace("v", "");
+            var versionNum = currentRelease.tag_name;
+            versionNum = versionNum.replace("v", "");
 
-        // Below I'll need to assign the right url to the button using /OS/gi.test()
+            // Below I'll need to assign the right url to the button using /OS/gi.test()
             $("#downloads .lin32").attr('href', updateLIN32);
             $("#downloads .lin64").attr('href', updateLIN64);
             $("#downloads .osxupdate").attr('href', updateOSX);
             $("#downloads .windowsupdate").attr('href', updateWIN);
 
-        // JQuery for changing version number    
+            // JQuery for changing version number    
             
             $(".currentVersion").replaceWith(versionNum);
             return;
