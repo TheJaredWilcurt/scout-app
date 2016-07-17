@@ -12,7 +12,7 @@ $.get(latestRelease, function (releases) {
         //number of downloads in this release
         var downloads = currentRelease.assets;
         var numDownloads = downloads.length;
-        
+
         //verify this release has more than three downloads
         if (numDownloads > 3) {
 
@@ -25,14 +25,15 @@ $.get(latestRelease, function (releases) {
             //loop through all downloads and assign the correct link to each update variable defined above
             for (var j = 0; j < numDownloads; j++) {
                 var currentDownload = downloads[j];
-                var downLoadLink = currentDownload.browser_download_url.toLowerCase();
-                if (/lin32/gi.test(downLoadLink)){
+                var downLoadLink = currentDownload.browser_download_url;
+                var checkLink = currentDownload.browser_download_url.toLowerCase();
+                if (/lin32/gi.test(checkLink)) {
                     updateLIN32 = downLoadLink;
-                } else if (/lin64/gi.test(downLoadLink)){
+                } else if (/lin64/gi.test(checkLink)) {
                     updateLIN64 = downLoadLink;
-                } else if (/osx/gi.test(downLoadLink)){
-                    updateOSX = downLoadLink;  
-                } else if (/win/gi.test(downLoadLink)){
+                } else if (/osx/gi.test(checkLink)) {
+                    updateOSX = downLoadLink;
+                } else if (/win/gi.test(checkLink)) {
                     updateWIN = downLoadLink;
                 }
             }
@@ -48,16 +49,21 @@ $.get(latestRelease, function (releases) {
             $("#downloads .osxupdate").attr('href', updateOSX);
             $("#downloads .windowsupdate").attr('href', updateWIN);
 
-            // JQuery for changing version number    
-            
+            $("#downloads .lin32").removeAttr('target').attr('download', '');
+            $("#downloads .lin64").removeAttr('target').attr('download', '');
+            $("#downloads .osxupdate").removeAttr('target').attr('download', '');
+            $("#downloads .windowsupdate").removeAttr('target').attr('download', '');
+
+            // JQuery for changing version number
+
             $(".currentVersion").replaceWith(versionNum);
             return;
         }
 
     }
-    
+
     // test
-    // bonus: in the title tag for the download button, denote the file size of the download in MB, Similar to target but it's title = 
+    // bonus: in the title tag for the download button, denote the file size of the download in MB, Similar to target but it's title =
     // bonus: in the title tag for the download button, denote the actual filename
 });
 
