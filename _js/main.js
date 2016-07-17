@@ -5,10 +5,26 @@
 var latestRelease = 'https://api.github.com/repos/TheJaredWilcurt/scout-app/releases';
 
 $.get(latestRelease, function (data) {
+
+    //terminology
+    //data = releases
+    //assets = downloads
+
     // Loop through all releases
-    for(var i = 0; i < data.length; i++){
+    for (var i = 0; i < data.length; i++) {
+        //number of downloads in this release
         var numDownloads = data[i].assets.length;
+        
+        //verify this release has more than three downloads
         if (numDownloads > 3) {
+
+           //loop through all the downloads
+           //check each download to see if it is for win/osx/lin32/lin64
+           //update the stuff on the page if that download relates to it
+           //comment every line
+
+
+
             var a = data[i].assets[0].browser_download_url.toLowerCase();
             var b = data[i].assets[1].browser_download_url.toLowerCase();
             var c = data[i].assets[2].browser_download_url.toLowerCase();
@@ -21,6 +37,12 @@ $.get(latestRelease, function (data) {
             var updateLIN64;
             var updateOSX;
             var updateWIN;
+
+            //version number update work
+            var dataString = a.split('/');
+            var vNum = dataString[7];
+            var versionNum = vNum.replace("v", "");
+
 
             //Make a loop that goes through each
             if (/lin32/gi.test(a)){
@@ -68,14 +90,14 @@ $.get(latestRelease, function (data) {
             $("#downloads .lin64").attr('href', updateLIN64);
             $("#downloads .osxupdate").attr('href', updateOSX);
             $("#downloads .windowsupdate").attr('href', updateWIN);
+
+        // JQuery for changing version number    
+            
+            $(".currentVersion").replaceWith(versionNum);
             return;
         }
 
-    };
-    //turn link into string, use split to turn into array, find correct OS and assign it to lines 8-11
-    // find the latest release with downloads
-    // update the 4 OS download buttons to have correct links
-    // update the version number in the version comparison table
+    }
     
     // test
     // bonus: in the title tag for the download button, denote the file size of the download in MB, Similar to target but it's title = 
