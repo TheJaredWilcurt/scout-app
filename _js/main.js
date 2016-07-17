@@ -23,67 +23,32 @@ $.get(latestRelease, function (data) {
            //update the stuff on the page if that download relates to it
            //comment every line
 
-
-
-            var a = data[i].assets[0].browser_download_url.toLowerCase();
-            var b = data[i].assets[1].browser_download_url.toLowerCase();
-            var c = data[i].assets[2].browser_download_url.toLowerCase();
-            var d = data[i].assets[3].browser_download_url.toLowerCase();
-
-            //var versionArray = a.split('/'); //I'll use this aaray to locate the version number
-            //var versionNum = versionArray[7]; //Only 2.0.1-beta2
-
+           //define variables that will hold the correct update link
             var updateLIN32;
             var updateLIN64;
             var updateOSX;
             var updateWIN;
 
+            //loop through all downloads and assign the correct link to each update variable defined above
+            for (var j = 0; j < numDownloads; j++){
+                var downLoadLink = data[i].assets[j].browser_download_url.toLowerCase();
+                if (/lin32/gi.test(downLoadLink)){
+                    updateLIN32 = downLoadLink;
+                } else if (/lin64/gi.test(downLoadLink)){
+                    updateLIN64 = downLoadLink;
+                } else if (/osx/gi.test(downLoadLink)){
+                    updateOSX = downLoadLink;  
+                } else if (/win/gi.test(downLoadLink)){
+                    updateWIN = downLoadLink;
+                }
+            }
+
             //version number update work
-            var dataString = a.split('/');
+            //I'll use this aaray to locate the version number
+            var dataString = downLoadLink.split('/');
+            //var versionNum = versionArray[7]; //Only 2.0.1-beta2
             var vNum = dataString[7];
             var versionNum = vNum.replace("v", "");
-
-
-            //Make a loop that goes through each
-            if (/lin32/gi.test(a)){
-                updateLIN32 = a;
-            } else if (/lin32/gi.test(b)){
-                updateLIN32 = b;
-            } else if (/lin32/gi.test(c)){
-                updateLIN32 = c;  
-            } else if (/lin32/gi.test(d)){
-                updateLIN32 = d;
-            }
-
-            if (/lin64/gi.test(a)){
-                updateLIN64 = a;
-            } else if (/lin64/gi.test(b)){
-                updateLIN64 = b;
-            } else if (/lin64/gi.test(c)){
-                updateLIN64 = c;  
-            } else if (/lin64/gi.test(d)){
-                updateLIN64 = d;
-            }
-
-            if (/osx/gi.test(a)){
-                updateOSX = a;
-            } else if (/osx/gi.test(b)){
-                updateOSX = b;
-            } else if (/osx/gi.test(c)){
-                updateOSX = c;  
-            } else if (/osx/gi.test(d)){
-                updateOSX = d;
-            }
-
-            if (/win/gi.test(a)){
-                updateWIN = a;
-            } else if (/win/gi.test(b)){
-                updateWIN = b;
-            } else if (/win/gi.test(c)){
-                updateWIN = c;  
-            } else if (/win/gi.test(d)){
-                updateWIN = d;
-            }
 
         // Below I'll need to assign the right url to the button using /OS/gi.test()
             $("#downloads .lin32").attr('href', updateLIN32);
