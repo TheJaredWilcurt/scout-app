@@ -31,14 +31,14 @@ Before grabbing one of these tasks ask in the [Scout-App chatroom](https://gitte
 
 ## Project management
 
-To do list:
+### Phase 1: MVP site
 
 * [x] ~~[Wireframe/page layout](http://imgur.com/201EJNd) (Micah)~~
 * [x] ~~Set up Gulp to auto minify/concat/uglify JS, Process Sass, and live reload (Micah)~~
 * [x] ~~Create screenshots for Win/OSX/Ubuntu. (TJW)~~
 * [x] ~~Take NEW screenshots now that we have a different logo. (TJW)~~
 * [x] ~~Wipe out the old site, reorganize and set up the new site (TJW)~~
-* [ ] Use [GitHub's API](https://developer.github.com/v3/repos/releases) to dynamically set the values of the download buttons (Luis)
+* [x] Use [GitHub's API](https://developer.github.com/v3/repos/releases) to dynamically set the values of the download buttons (Luis)~~
 * [ ] Use Crossbrowser.js and 64or32.js to display the correct download button. (Luis)
 * [x] ~~Display a "minimum system requirements", maybe tailor it to each OS, as free space requirement will vary (TJW)~~
 * [x] ~~Show a [comparison table](https://github.com/TheJaredWilcurt/scout-app#scout-app-comparison) of the old Scout-App and the new Scout-App (TJW)~~
@@ -49,6 +49,11 @@ To do list:
 * [x] ~~New logo and branding based on Scout the Puppy (Kim)~~
 * [ ] "Getting Started with Scout-App 2" video (TJW)
 * [x] ~~"[Create your own Theme](https://www.youtube.com/watch?v=DtEVIDvBrSI)" video (TJW)~~ Will likely remake this later, could be improved.
+
+### Phase 2: Non-MVP
+
+* [ ] [Improve the design of the quotes section](http://imgur.com/gpEGWaK) (Kim)
+* [ ] Improve other aspects of the design in other sections
 
 * * *
 
