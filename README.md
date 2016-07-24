@@ -7,7 +7,7 @@ Scout-App is the simplest Sass processor.
 
 The repo for the desktop app is located here:
 
-* http://TheJaredWilcurt.github.io/scout-app
+* http://scout-app.io
 
 * * *
 
@@ -52,6 +52,7 @@ Before grabbing one of these tasks ask in the [Scout-App chatroom](https://gitte
 
 ### Phase 2: Non-MVP
 
+* [x] ~~Buy scout-app.io (TJW)~~
 * [ ] [Improve the design of the quotes section](http://imgur.com/gpEGWaK) (Kim)
 * [ ] Improve other aspects of the design in other sections
 
