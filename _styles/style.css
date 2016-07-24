@@ -875,6 +875,22 @@ footer a:hover {
   box-shadow: 0px 0px 14px -2px #FFD255;
 }
 
+#downloads-and-video h1 {
+  margin-top: 30px;
+}
+
+#downloads-and-video p a {
+  display: inline-block;
+  padding-bottom: 20px;
+  color: #FFD255;
+  text-decoration: none;
+}
+
+#downloads-and-video p a:hover {
+  color: #DD8D4B;
+  text-decoration: underline;
+}
+
 #whatsnew {
   padding-bottom: 40px;
 }
