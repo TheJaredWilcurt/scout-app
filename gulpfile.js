@@ -4,6 +4,7 @@ var livereload = require('gulp-livereload');
 var rename = require('gulp-rename');
 var sass = require('gulp-sass');
 var uglify = require('gulp-uglify');
+var insert = require('gulp-insert');
 
 function errorLog (error) {
     console.error.bind(error);
@@ -15,6 +16,7 @@ gulp.task('uglify', function () {
     gulp.src('_js/*.js')
         .pipe(uglify())
         .on('error', errorLog)
+        .pipe(insert.append('\n'))
         .pipe(gulp.dest('_scripts'));
 });
 
