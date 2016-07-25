@@ -122,11 +122,10 @@ $(".showtranslations").click(function () {
 window.siteData = {
     "os": {
         "win":    { "name": "Windows 7", "legacy": [ { "name": "XP",            "image": "xp"       },
-                                                     { "name": "Windows Vista", "image": "vista"    },
                                                      { "name": "Windows 10",    "image": "win10"    } ] },
         "ubuntu": { "name": "Ubuntu",    "legacy": [ { "name": "Ubuntu 12 LTS", "image": "ubuntu12" } ] },
         "zorin":  { "name": "Zorin",     "legacy": [ { "name": "Debian",        "image": "debian"   } ] },
-        "osx":    { "name": "OSX",       "legacy": [ { "name": "OSX 10.6",      "image": "osx106"   } ] }
+        "osx":    { "name": "OSX"                                                                       }
     },
     "cultures": [
         { "language": "English", "code": "en", "image": "02" },
@@ -181,7 +180,6 @@ function updateScreenshots (os) {
     var slideshowDOM = '';
     var screenshots = siteData.screenshots;
     var osName = siteData.os[os].name;
-    var legacy = siteData.os[os].legacy;
     var img = '';
     var text = '';
     var el = '';
@@ -191,11 +189,14 @@ function updateScreenshots (os) {
         el = slideMaker(os, img, text);
         slideshowDOM = slideshowDOM + '\n' + el;
     }
-    for (var j = 0; j < legacy.length; j++) {
-        img = legacy[j].image;
-        text = legacy[j].name;
-        el = slideMaker(os, img, text);
-        slideshowDOM = slideshowDOM + '\n' + el;
+    if (siteData.os[os].legacy) {
+        var legacy = siteData.os[os].legacy;
+        for (var j = 0; j < legacy.length; j++) {
+            img = legacy[j].image;
+            text = legacy[j].name;
+            el = slideMaker(os, img, text);
+            slideshowDOM = slideshowDOM + '\n' + el;
+        }
     }
     var target = "#screenshots .slick";
     $(target).html(slideshowDOM).removeClass("slick-initialized slick-slider slick-dotted");
