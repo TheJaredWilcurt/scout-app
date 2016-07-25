@@ -39,7 +39,7 @@ Before grabbing one of these tasks ask in the [Scout-App chatroom](https://gitte
 * [x] ~~Take NEW screenshots now that we have a different logo. (TJW)~~
 * [x] ~~Wipe out the old site, reorganize and set up the new site (TJW)~~
 * [x] Use [GitHub's API](https://developer.github.com/v3/repos/releases) to dynamically set the values of the download buttons (Luis)~~
-* [ ] Use Crossbrowser.js and 64or32.js to display the correct download button. (Luis)
+* [x] ~~Use Crossbrowser.js and 64or32.js to display the correct download button. (Luis)~~
 * [x] ~~Display a "minimum system requirements", maybe tailor it to each OS, as free space requirement will vary (TJW)~~
 * [x] ~~Show a [comparison table](https://github.com/TheJaredWilcurt/scout-app#scout-app-comparison) of the old Scout-App and the new Scout-App (TJW)~~
 * [x] ~~[Listing of Mixins](https://github.com/TheJaredWilcurt/scout-app#supportedbuilt-in-mixin-libraries) that come built in to Scout-App 2 (TJW)~~
