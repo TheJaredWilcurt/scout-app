@@ -3,9 +3,11 @@
 
 
 /* TEAM */
-  Lead Developer of Scout-App 2 - github.com/TheJaredWilcurt
+  scout-app.io/#contributors
 
 /* SITE */
-  HTML5, CSS3, JavaScript (ES5), jQuery
+  HTML5, CSS3, Sass, JavaScript (ES5), jQuery
   Sublime Text 3, Photoshop CS6, Illustrator CS6
-  TruePNG, Png Optimizer, PNGOUT Win, zopflipng, PNG Gauntlet, defluff, deflopt
+  TruePNG, Png Optimizer, PNGOUT Win, zopflipng, PNG Gauntlet, defluff, deflopt, SVGO-GUI
+  git, GitHub, GitHub Pages, GitHub for Desktop
+  gulp, express, jshint

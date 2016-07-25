@@ -265,24 +265,33 @@ $("#themes img").click(function () {
 // From that we can know what OS the user is on and click on specific items on the page so they will auto-show the correct stuff
 
 // Here are all of the classes we can check for:
-// Firefox, IE, Opera, Safari, Chrome, Konqueror, Iron, ie6, ie7, ie8, ie9
-// Webkit, Mozilla, Gecko
-// Mac, Win, Win8, Win7, Vista, WinXP, Win2k, WinNT, FreeBSD, Linux, x11
-// Ipod, Ipad, Iphone, WebTV, Blackberry, Android, J2me, RIM Playbook, mobile
+//win, mac, linux
 
 
 // On page load 64or32-jquery.min.js will add in one of the following classes to the <html> tag: unknown, mobile, arch32, arch64
 // From that we can know if someone is on 32 or 64 bit OS. This is really only useful for the linux downloads.
 
-// We should be updating the following:
-//
-// * Add a class of "selected" to the correct download button
-// * Which screenshots are being shown by default in the Screenshots section
-// * Which screenshots are being shown in the Cultures/languages section
-// * Which screenshots are being shown in the Themes section
-// * Which minimum system reqirements are shown by default
+var currentOs;
+var linuxType;
 
-$("#screenshots .win").click();
-$("#cultures .win").click();
-$("#themes .win").click();
-$("#minreqs [data-os='win']").click();
+if ($("html").hasClass("win")) {
+    currentOs = "win";
+    $("#downloads .windowsupdate").addClass('selected');
+} else if ($("html").hasClass("mac")) {
+    currentOs = "osx";
+    $("#downloads .osxupdate").addClass('selected');
+} else if ($("html").hasClass("linux")) {
+        currentOs = "ubuntu";
+        if ($("html").hasClass("arch32")) {
+            linuxType = "lin32";
+            $("#downloads .lin32").addClass('selected');
+        } else if ($("html").hasClass("arch64")) {
+            linuxType = "lin64";
+            $("#downloads .lin64").addClass('selected');
+        }
+}
+
+$("#screenshots ." + currentOs).click();
+$("#cultures ." + currentOs).click();
+$("#themes ." + currentOs).click();
+$("#minreqs [data-os='" + currentOs +"']").click();
