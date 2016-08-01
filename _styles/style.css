@@ -1097,7 +1097,7 @@ footer a:hover {
 }
 
 #minreqs table {
-  min-height: 185px;
+  height: 185px;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -1185,8 +1185,9 @@ footer a:hover {
   border-bottom: 2px solid #000;
   border-color: #821919;
   padding-bottom: 8px;
+  font-family: "Rubik One", sans-serif;
   font-size: 30px;
-  font-weight: bold;
+  font-weight: 500;
   vertical-align: bottom;
 }
 
@@ -1215,7 +1216,7 @@ footer a:hover {
 }
 
 #themes p {
-  margin: 30px 0px;
+  margin: 30px auto;
 }
 
 #themes .osselect {

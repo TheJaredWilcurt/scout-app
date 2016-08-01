@@ -110,6 +110,9 @@ $("#translation_instructions").hide();
 $(".showtranslations").click(function () {
     $("#translation_instructions").slideToggle();
 });
+$("footer .translate-link").click(function () {
+    $("#translation_instructions").slideDown();
+});
 
 
 
